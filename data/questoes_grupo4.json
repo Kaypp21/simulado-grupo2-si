@@ -1,0 +1,746 @@
+[
+  {
+    "id": "G4-RED-001",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 22
+    },
+    "enunciado": "Uma organização recebeu o bloco de endereços IPv4 192.168.10.0/24 e precisa segmentá-lo em 4 sub-redes de tamanhos iguais para isolar os departamentos Administrativo, Financeiro, Engenharia e Visitantes. Qual máscara de sub-rede (em notação CIDR) e quantos endereços IP válidos para hosts cada sub-rede terá, respectivamente?",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "/25 e 126 hosts válidos por sub-rede.",
+      "B": "/26 e 62 hosts válidos por sub-rede.",
+      "C": "/26 e 64 hosts válidos por sub-rede.",
+      "D": "/27 e 30 hosts válidos por sub-rede.",
+      "E": "/28 e 14 hosts válidos por sub-rede."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "Para obter 4 sub-redes (2² = 4), são necessários 2 bits emprestados da porção de host da máscara padrão /24, resultando em /26 (24 + 2 = 26). Como restam 6 bits para hosts (32 - 26 = 6), o total de endereços por sub-rede é 2⁶ = 64. Subtraindo o endereço de rede e o endereço de broadcast, restam 62 IPs válidos para atribuição a dispositivos.",
+      "distratores": "A alternativa A (/25) gera apenas 2 sub-redes. A C esquece de descontar os endereços de rede e broadcast. As alternativas D (/27) e E (/28) geram 8 e 16 sub-redes, respectivamente."
+    }
+  },
+  {
+    "id": "G4-SEG-002",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC",
+      "ano": 2022,
+      "numero_questao": 48
+    },
+    "enunciado": "No contexto de criptografia aplicada à segurança de comunicações em rede, um emissor deseja garantir simultaneamente a confidencialidade da mensagem enviada a um receptor específico e a autenticidade de sua própria identidade como remetente. Considerando o uso de criptografia assimétrica (chaves pública e privada), qual sequência de operações atende a ambos os requisitos?",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Cifrar com a chave pública do emissor e depois cifrar com a chave privada do receptor.",
+      "B": "Cifrar com a chave privada do receptor e depois cifrar com a chave pública do emissor.",
+      "C": "Assinar (cifrar o resumo) com a chave privada do emissor e cifrar o conjunto com a chave pública do receptor.",
+      "D": "Assinar (cifrar o resumo) com a chave pública do emissor e cifrar o conjunto com a chave privada do receptor.",
+      "E": "Cifrar toda a mensagem apenas com a chave pública do emissor."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "A autenticidade (e o não repúdio) é garantida quando o emissor utiliza sua própria chave privada para assinar a mensagem (verificável por meio de sua chave pública). A confidencialidade é assegurada ao cifrar o conteúdo com a chave pública do receptor, pois somente ele detém a chave privada correspondente para decifrá-lo.",
+      "distratores": "Cifrar com chave pública do emissor (D e E) não garante sigilo nem autenticidade, pois a chave pública é aberta. Ninguém além do próprio titular possui a chave privada do receptor (A e B)."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q11",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 11
+    },
+    "enunciado": "Uma empresa deseja se reposicionar no mercado e, para isso, precisa ampliar sua capacidade de atendimento em serviços computacionais. Atualmente, os sistemas infraestruturais e de informação rodam sobre Sistemas Operacionais de diversas versões e distribuições, tanto na plataforma Windows, quanto na plataforma Linux. Uma consultoria especializada propôs a migração do parque de servidores físicos para servidores virtuais, adotando-se o tipo II, ou seja, os Monitores de Máquina Virtual serão executados como processos dos Sistemas Operacionais hospedeiros, mantendo-se, a princípio, os Sistemas Operacionais do parque original como visitantes e adotando-se um único Sistema Operacional como hospedeiro.\n\nSobre o modelo proposto pela consultoria, avalie as afirmações a seguir.\nI. Os Sistemas Operacionais visitantes serão infectados se algum malware se instalar no Sistema Operacional hospedeiro.\nII. A empresa, após a virtualização, economizará recursos financeiros na aquisição de servidores e obterá mais eficiência no consumo de recursos.\nIII. A empresa não poderá manter a mesma estrutura de Sistemas Operacionais físicos no sistema virtualizado do tipo II.\nIV. A recuperação do Sistema Operacional virtual é mais simples e rápida, quando comparada ao sistema físico.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e III.",
+      "B": "II e III.",
+      "C": "II e IV.",
+      "D": "I, II e IV.",
+      "E": "I, III e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações II e IV estão corretas. A virtualização consolida múltiplos servidores em menos hardware físico, reduzindo custos de aquisição, energia e refrigeração (II). Além disso, máquinas virtuais são encapsuladas em arquivos de imagem e suportam snapshots, tornando o backup e a recuperação muito mais rápidos do que em servidores físicos (IV).",
+      "distratores": "A afirmação I é incorreta porque o monitor de máquina virtual (hypervisor) fornece isolamento entre o sistema hospedeiro e os visitantes, não havendo infecção automática dos guests. A afirmação III é incorreta porque hypervisores do tipo II suportam simultaneamente diferentes sistemas operacionais visitantes (Windows e Linux)."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q12",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 12
+    },
+    "enunciado": "A segurança dos dados refere-se às medidas que garantem confidencialidade, integridade e disponibilidade dos sistemas de informação e dos dados neles armazenados. É importante compreender que a segurança dos dados exige uma abordagem ampla em toda a empresa. Com base no exposto, não é possível proteger os dados se eles não forem resguardados por todos os processos que os circundam. A segurança dos dados depende de fatores como arquitetura dos sistemas, sistemas de hardware e software, rede e seus dispositivos, como também de pessoas internas e externas à organização.\n\nConsiderando a segurança em bancos de dados, avalie as asserções a seguir e a relação proposta entre elas.\nI. A confidencialidade dos dados é o que garante que eles estejam protegidos contra acesso não autorizado e em caso de acesso autorizado, que sejam utilizados apenas para a finalidade designada.\nPORQUE\nII. As permissões de acesso às informações contidas nos bancos de dados dependem também da disponibilidade de acesso aos dados, sempre que solicitado por usuários autorizados para finalidades autorizadas.\n\nA respeito dessas asserções, assinale a opção correta.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.",
+      "B": "As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.",
+      "C": "A asserção I é proposição verdadeira, e a II é uma proposição falsa.",
+      "D": "A asserção I é proposição falsa, e a II é uma proposição verdadeira.",
+      "E": "As asserções I e II são proposições falsas."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "Ambas as asserções são conceituais e verdadeiras: a I define corretamente o princípio da confidencialidade (controle de acesso e uso autorizado) e a II descreve corretamente o princípio da disponibilidade (acesso garantido quando necessário aos usuários autorizados). Contudo, a disponibilidade não é a causa ou justificativa da confidencialidade, pois são pilares distintos da tríade CIA.",
+      "distratores": "A alternativa A está incorreta porque não existe relação de causalidade ('PORQUE') entre disponibilidade e confidencialidade. As alternativas C, D e E falham ao classificar uma ou ambas as definições corretas como falsas."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q16",
+    "subarea": "Computação em Nuvem",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 16
+    },
+    "enunciado": "A computação em nuvem é caracterizada por um conjunto de recursos virtualizados e disponibilizados via internet. Os recursos podem ser configurados dinamicamente, fornecendo a base para a escalabilidade sob demanda. O vínculo com a computação em nuvem geralmente se baseia em um modelo de pagamento por uso, no qual as garantias são oferecidas por meio de SLAs (acordos de nível de serviço) personalizados. Os provedores de computação em nuvem oferecem essas camadas aos clientes por meio de várias interfaces (incluindo ferramentas de linha de comando, ambientes de programação e interfaces Web), levando a três tipos diferentes de serviços:\n• Infraestrutura como Serviço (IaaS);\n• Plataforma como Serviço (PaaS);\n• Software como Serviço (SaaS).\n\nConsiderando as informações apresentadas, avalie as afirmações a seguir.\nI. O uso do IaaS é recomendado para pequenas e médias empresas cujo crescimento da infraestrutura não acompanha sua expansão, bem como para empresas que possuem demandas oscilantes, como lojas virtuais.\nII. O uso de IaaS e SaaS não é recomendado quando há restrições legais quanto ao armazenamento ou terceirização dos dados, como ocorre muitas vezes em empresas e autarquias públicas.\nIII. O uso de SaaS é recomendado para grandes empresas que estão dispostas a investir em grande escala na compra de licenças.\nIV. O uso de PaaS não é indicado para empresas que possuem um time próprio de desenvolvedores.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "III e IV.",
+      "D": "I, II e IV.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "As afirmações I e II estão corretas. A elasticidade do IaaS permite escalar recursos computacionais sob demanda sem investimento inicial alto em hardware (I). Já órgãos públicos ou setores regulados com restrições rígidas de soberania e localização de dados enfrentam barreiras legais para hospedar informações em nuvem pública terceirizada (II).",
+      "distratores": "A afirmação III está incorreta porque o modelo SaaS opera por assinatura/pagamento por uso, justamente dispensando a compra tradicional de licenças perpétuas. A afirmação IV está incorreta porque o PaaS é projetado especificamente para equipes de desenvolvimento implantarem aplicações sem gerenciar servidores ou sistemas operacionais."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q17",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 17
+    },
+    "enunciado": "O funcionamento da internet está baseado no roteamento de pacotes do tipo IP (Internet Protocol). Com relação a este protocolo e aos equipamentos utilizados para roteá-lo, avalie as afirmações a seguir.\nI. Um pacote IPv4 pode ficar em loop indefinidamente, caso haja erros nas tabelas de roteamentos dos roteadores.\nII. Em uma intranet com mais de um roteador, o sequenciamento de pacotes IPv4 é garantido por meio do campo TTL.\nIII. Um pacote IPv4 pode ser fragmentado por qualquer dispositivo na rede, se o tamanho máximo de MTU da rede onde os pacotes vão transitar for menor que o tamanho do pacote a ser transmitido.\nIV. Ao enviar um pacote IPv4, a máscara de subrede é utilizada pelo computador ou roteador para identificar se o computador de destino pertence a esta mesma subrede.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "III e IV.",
+      "D": "I, II e IV.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações III e IV estão corretas. No IPv4, roteadores intermediários podem fragmentar datagramas caso o MTU do próximo enlace seja menor que o tamanho do pacote (desde que a flag DF não esteja ativa) (III). Além disso, a operação lógica AND entre o endereço IP e a máscara de sub-rede determina se o destino está na rede local ou deve ser encaminhado ao gateway padrão (IV).",
+      "distratores": "A afirmação I é falsa porque o campo TTL (Time to Live) é decrementado a cada salto e o pacote é descartado ao atingir zero, evitando loops infinitos. A afirmação II é falsa porque o IPv4 não garante entrega ordenada nem sequenciamento (função exercida pelo TCP na camada de transporte)."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q25",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 25
+    },
+    "enunciado": "Em conformidade com a ABNT NBR ISO/IEC 27002 (2013), segurança da informação envolve práticas e processos de proteção e salvaguarda dos ativos da informação e de tecnologias da informação. Está amparada pelos preceitos de integridade, disponibilidade e confidencialidade. Segurança da informação também pode ser entendida como uma área do conhecimento dedicada à proteção de ativos da informação contra acessos não autorizados e alterações indevidas. Além disso, ela aborda a proteção da informação contra vários tipos de ameaças, implicando na possível continuidade do negócio, na minimização do risco e na maximização do retorno sobre os investimentos e oportunidades.\n\nConsiderando o texto apresentado, avalie as afirmações a seguir.\nI. A integridade da informação tem como objetivo garantir a acessibilidade da informação.\nII. A disponibilidade garante que os autorizados a acessarem a informação possam fazê-lo sempre que necessário.\nIII. A confidencialidade da informação é a garantia de que somente pessoas autorizadas terão acesso a ela, protegendo-a de acordo com o grau de sigilo do seu conteúdo.\nIV. A legalidade é a garantia de que a informação foi produzida em conformidade com a lei.\nV. A autenticidade é a garantia de que em um processo de comunicação os remetentes sejam exatamente quem dizem ser.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e IV.",
+      "C": "II, III e V.",
+      "D": "I, III, IV e V.",
+      "E": "II, III, IV e V."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "As afirmações II, III, IV e V definem corretamente os atributos de segurança da informação: disponibilidade (acesso contínuo aos autorizados), confidencialidade (restrição de acesso conforme sigilo), legalidade (conformidade jurídica/regulatória) e autenticidade (comprovação da identidade da origem).",
+      "distratores": "A afirmação I está incorreta porque garantir que a informação esteja acessível quando necessária é a definição de disponibilidade. A integridade refere-se à exatidão e completude da informação, protegendo-a contra alterações não autorizadas."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q27",
+    "subarea": "Infraestrutura de TI",
+    "nivel_dificuldade": "Avançado",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 27
+    },
+    "enunciado": "Suponha que um gestor de TI de determinada empresa está avaliando o desempenho de infraestrutura com o objetivo de evitar despesas desnecessárias em aumento de capacidade. Ele identifica que o servidor da base de dados do sistema mais solicitado realiza uma média de 4,5 operações de I/O por transação, sendo que cada I/O realizado no disco consome em média 20 ms. Em uma hora, ele observa que 7 200 transações foram executadas.\n\nCom base nas informações apresentadas, o gestor concluiu que o throughput médio do disco (em transações por segundo) e a utilização média do disco (em valor percentual) são, respectivamente,",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "2 e 1,8.",
+      "B": "2 e 18.",
+      "C": "9 e 2.",
+      "D": "9 e 18.",
+      "E": "15 e 9."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "Em 1 hora (3 600 segundos), são executadas 7 200 transações, o que equivale a 7 200 / 3 600 = 2 transações por segundo. Como cada transação exige 4,5 operações de I/O, a taxa de chegada no disco é de 2 × 4,5 = 9 operações de I/O por segundo (IOPS — valor adotado pelo gabarito oficial do INEP para o throughput do disco). Como cada I/O leva 20 ms (0,020 s), a utilização média do disco é U = 9 × 0,020 = 0,18, ou 18%.",
+      "distratores": "As alternativas A e C erram o cálculo percentual da utilização (1,8% e 2%). A alternativa B apresenta a taxa de transações do sistema (2 tx/s), mas o gabarito oficial do INEP considera a vazão de operações do próprio disco (9 IOPS)."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q34",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 34
+    },
+    "enunciado": "Com o crescimento da população urbana, problemas de infraestrutura e de acesso limitado a recursos em diversas cidades ao redor do mundo afetam negativamente a vida de bilhões de pessoas. Tornar as cidades mais inteligentes pode ajudar a melhorar os serviços urbanos, aumentando a qualidade de vida de seus cidadãos. As Tecnologias da Informação e Comunicação (TIC) propiciam meios fundamentais para viabilizar essa mudança, entretanto, ainda existem desafios científicos e técnicos significativos que necessitam ser enfrentados antes que essas plataformas possam ser amplamente utilizadas.\n\nConsiderando as informações apresentadas, avalie as afirmações a seguir.\nI. Uma forma de enfrentar o problema da infraestrutura é tornar as cidades mais inteligentes e, para atingir esse objetivo, as TIC podem ser empregadas para coletar e analisar uma grande quantidade de informações geradas por diversas fontes de dados da cidade, como, por exemplo: redes de sensores, sistemas de trânsito e dispositivos dos cidadãos.\nII. Uma dificuldade que ocorre na maioria das aplicações de cidades inteligentes é que, geralmente, os sistemas são direcionados a um problema específico e são desenvolvidos desde o início com pouco reuso de software e sem a comunicação entre eles, o que gera maior trabalho e dificuldade na criação de aplicações que necessitem de dados e serviços de diversos domínios.\nIII. Entre os maiores desafios no desenvolvimento de aplicações para cidades inteligentes estão a garantia da privacidade e da segurança dos cidadãos, o gerenciamento do armazenamento e do processamento de grandes quantidades de dados, além da heterogeneidade de dispositivos existentes.\nIV. A Internet das Coisas (Internet of Things - IoT) faz uso de tecnologias e protocolos proprietários para conexão de objetos do cotidiano, tais como lâmpadas para iluminação pública, semáforos de trânsito e sensores de qualidade de água e ar, sendo que os objetos devem ser identificados com um nome único, sua posição e estado conhecidos, e devem ser acessíveis por meio de redes móveis.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e IV.",
+      "B": "II e III.",
+      "C": "III e IV.",
+      "D": "I, II e III.",
+      "E": "I, II e IV."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "As afirmações I, II e III estão corretas. Cidades inteligentes apoiam-se na coleta massiva de dados urbanos por redes de sensores e dispositivos (I), enfrentam ilhas de sistemas legados sem interoperabilidade (II) e lidam com desafios críticos de segurança, privacidade, Big Data e heterogeneidade de hardware (III).",
+      "distratores": "A afirmação IV é falsa porque a Internet das Coisas (IoT) baseia-se fundamentalmente em padrões abertos e protocolos interoperáveis (como IPv6, 6LoWPAN, MQTT, CoAP, HTTP e IEEE 802.15.4), e não em protocolos exclusivamente proprietários."
+    }
+  },
+  {
+    "id": "ENADE2017-CC-Q12",
+    "subarea": "Arquitetura de Computadores",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE (Ciência da Computação)",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 12
+    },
+    "enunciado": "Em um computador, a memória é a unidade funcional que armazena e recupera operações e dados. Tipicamente, a memória de um computador usa uma técnica chamada acesso aleatório, que permite o acesso a qualquer uma de suas posições (células). As memórias de acesso aleatório são divididas em células de tamanho fixo, estando cada célula associada a um identificador numérico único chamado endereço. Todos os acessos à memória referem-se a um endereço específico e deve-se sempre buscar ou armazenar o conteúdo completo de uma célula, ou seja, a célula é a unidade mínima de acesso.\n\nConsiderando o funcionamento de uma memória de acesso aleatório, avalie as afirmações a seguir.\nI. Se a largura do registrador de endereços da memória for de 8 bits, o tamanho máximo dessa unidade de memória será de 256 células.\nII. Se o registrador de dados da memória tiver 8 bits, será necessário mais que uma operação para armazenar o valor inteiro 2024 nessa unidade de memória.\nIII. Se o registrador de dados da memória tiver 12 bits, é possível que a largura de memória seja de 8 bits.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "III, apenas.",
+      "C": "I e II, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações I e II estão corretas. Com um registrador de endereços de 8 bits, é possível endereçar 2⁸ = 256 posições distintas de memória (I). Para representar o número decimal 2024 em binário (11111101000₂), são necessários 11 bits; como o registrador de dados comporta apenas 8 bits por vez, exigirá no mínimo duas operações de escrita (II).",
+      "distratores": "A afirmação III é incorreta porque a largura do registrador de dados corresponde à largura da própria célula/palavra da memória (unidade mínima de transferência); se o registrador de dados possui 12 bits, a largura da palavra de memória também é de 12 bits."
+    }
+  },
+  {
+    "id": "ENADE2021-RED-Q21",
+    "subarea": "Computação em Nuvem",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE (Redes de Computadores)",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 21
+    },
+    "enunciado": "Contêineres e VMs (virtual machines, ou máquinas virtuais) são simplesmente maneiras diferentes de criar e usar recursos de computação — geralmente processadores, memória e dispositivos de entrada e saída — que já estão presentes em um computador físico. Embora o objetivo da virtualização por meio de máquinas virtuais seja essencialmente o mesmo que os contêineres, o resultado são duas abordagens notavelmente diferentes que oferecem algumas características e vantagens exclusivas para cargas de trabalho corporativas.\n\nA respeito das características das duas abordagens citadas no texto, avalie as afirmações a seguir.\nI. Os contêineres podem empacotar o código de uma aplicação e todas as suas dependências, o que possibilita maior granularidade, escalabilidade e portabilidade do que as máquinas virtuais.\nII. Os contêineres compartilham o kernel do sistema operacional com outros processos, mas não podem ser limitados quanto ao uso de recursos, tais como CPU, RAM ou dispositivos de entrada/saída.\nIII. Os contêineres são vantajosos por oferecerem um grau mais alto de isolamento e segurança do que as máquinas virtuais, devido ao fato de que os primeiros executam no mesmo kernel do sistema operacional.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "II, apenas.",
+      "C": "I e III, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "Apenas a afirmação I está correta. Por virtualizarem no nível do sistema operacional sem carregar um SO completo convidado, os contêineres empacotam apenas a aplicação e suas bibliotecas, garantindo inicialização rápida, alta portabilidade entre ambientes e escalabilidade granular.",
+      "distratores": "A afirmação II é falsa porque o kernel Linux oferece mecanismos nativos (como cgroups — control groups) para limitar rigorosamente CPU, memória RAM e I/O de cada contêiner. A afirmação III é falsa porque as máquinas virtuais oferecem maior isolamento de segurança justamente por possuírem kernels independentes sobre o hypervisor."
+    }
+  },
+  {
+    "id": "ENADE2021-RED-Q29",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE (Redes de Computadores)",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 29
+    },
+    "enunciado": "Redes Definidas por Software (SDN) permitem que administradores de redes gerenciem os serviços da rede de uma maneira mais simples, com uma maior abstração da funcionalidade em baixo nível da rede, isso é feito através da virtualização. O que evita ter que configurar o hardware manualmente. Para fazer essa abstração, a SDN realiza uma separação em dois planos e requer um dispositivo controlador.\n\nConsiderando as informações apresentadas, assinale a alternativa que descreve corretamente a denominação dos dois planos mencionados.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Dados e controle",
+      "B": "Controle e fluxo",
+      "C": "Fluxo e gerenciamento",
+      "D": "Dados e gerenciamento",
+      "E": "Gerenciamento e controle"
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "A arquitetura SDN (Software-Defined Networking) desacopla o plano de controle (responsável pelas decisões de roteamento e lógica da rede, centralizado em um controlador via protocolos como OpenFlow) do plano de dados ou encaminhamento (responsável apenas por encaminhar pacotes nos switches com base nas tabelas instaladas pelo controlador).",
+      "distratores": "As alternativas B, C, D e E misturam conceitos operacionais (fluxo e gerenciamento) que não correspondem à divisão arquitetural fundamental da SDN entre plano de controle e plano de dados."
+    }
+  },
+  {
+    "id": "ENADE2021-RED-Q34",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Avançado",
+    "fonte": {
+      "exame": "ENADE (Redes de Computadores)",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 34
+    },
+    "enunciado": "As empresas têm revisado suas políticas de segurança da informação de modo a adotar novas tecnologias que aumentem a segurança, principalmente, em situações que envolvam reuniões por webconferência. Considerando este cenário, a tecnologia de redes virtuais privadas (VPN – Virtual Private Network) são bastante utilizadas para aumentar o nível de segurança dos dados que trafegam na rede pública.\n\nNo que se refere a VPN, avalie as afirmações a seguir.\nI. As VPNs criam túneis na rede pública que permitem conectar diferentes unidades organizacionais, compartilhar informações e conectar funcionários em atividades remotas às plataformas corporativas, oferecendo criptografia forte para fornecer segurança de dados e autenticação forte para limitar o acesso a aplicativos com base em políticas de segurança definidas.\nII. As soluções de implementação VPN atuam em diferentes camadas da arquitetura OSI, por exemplo, o Internet Protocol Security (IPSec) atua na camada de rede, enquanto o Secure Sockets Layer (SSL) atua na camada de aplicação.\nIII. A VPN IPsec normalmente permite acesso remoto a todos os dispositivos e serviços oferecidos em uma rede e seu protocolo faz parte do conjunto TCP/IP, sendo implementado como um componente padrão dos sistemas operacionais que suportam o IPv6.\nIV. Como na VPN IPSec, a VPN SSL também oferece acesso a todos os recursos da rede privada, sendo que sua principal diferença é a dependência do TLS, que é incorporado por padrão em navegadores da Web.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "II e IV, apenas.",
+      "C": "III e IV, apenas.",
+      "D": "I, II e III, apenas.",
+      "E": "I, II, III e IV."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "As afirmações I, II e III estão corretas. A VPN estabelece tunelamento cifrado e autenticado sobre infraestrutura pública (I); o IPsec opera na camada de rede (Camada 3 OSI), enquanto o SSL/TLS opera acima da camada de transporte/aplicação (II); e o IPsec integra nativamente a arquitetura IPv6 e permite acesso amplo em nível de rede (III).",
+      "distratores": "A afirmação IV está incorreta porque a VPN SSL/TLS não concede acesso irrestrito a todos os recursos e protocolos da rede privada como ocorre na VPN IPsec em modo túnel; ela restringe o acesso especificamente a aplicações autorizadas (como portais web e serviços específicos)."
+    }
+  },
+  {
+    "id": "ENADE2024-LC-Q30",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE (Licenciatura em Computação)",
+      "instituicao": "INEP",
+      "ano": 2024,
+      "numero_questao": 30
+    },
+    "enunciado": "Durante uma aula de redes, um professor propôs aos estudantes que instalassem, em seus computadores, um analisador de pacotes (packet sniffer), a fim de que pudessem compreender mais a fundo os protocolos de rede, e solicitou que observassem a troca de dados entre duas entidades comunicantes em um cenário real. A ferramenta utilizada foi o Wireshark e uma imagem registrando o seu uso por um estudante é mostrada a seguir.\n\nConsiderando-se a imagem apresentada, em que são evidenciados os pacotes trocados durante o acesso do estudante a um site na Internet, bem como os protocolos de comunicação utilizados (DNS, HTTP e TCP) e mostrados na coluna Protocol, foi observado que",
+    "imagem_url": "assets/q30.png",
+    "alternativas": {
+      "A": "o DNS foi utilizado para enviar uma mensagem de requisição de conexão a um servidor Web.",
+      "B": "o TCP foi utilizado porque é um protocolo orientado à conexão e é preciso estabelecê-la antes que os dispositivos comecem a transmitir dados.",
+      "C": "o HTTP foi utilizado para traduzir o endereço do site acessado para um endereço IP válido contendo a localização do servidor Web correspondente.",
+      "D": "o DNS, HTTP e TCP utilizados são considerados protocolos da camada de aplicação, pois o acesso ao site foi feito por um programa de usuário (browser) que permite navegar pela Internet."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "Na captura do Wireshark (pacotes 70, 71 e 72), observa-se o handshake de três vias do TCP ([SYN], [SYN, ACK] e [ACK]) antes da transmissão da requisição HTTP GET (pacote 73), confirmando que o TCP é um protocolo orientado à conexão da camada de transporte.",
+      "distratores": "A alternativa A confunde a função do DNS (resolução de nomes para IP) com estabelecimento de conexão. A C atribui ao HTTP a tradução de nomes de domínio. A D classifica incorretamente o TCP na camada de aplicação (ele pertence à camada de transporte)."
+    }
+  },
+  {
+    "id": "ENADE2024-LC-Q42",
+    "subarea": "Arquitetura de Computadores",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE (Licenciatura em Computação)",
+      "instituicao": "INEP",
+      "ano": 2024,
+      "numero_questao": 42
+    },
+    "enunciado": "Um professor irá ministrar uma sequência didática sobre arquitetura e organização de computadores e está planejando uma atividade prática para seus alunos. Para isso, pretende utilizar um programa simulador, a fim de que os estudantes explorem o funcionamento do hardware típico de um sistema computacional.\n\nTendo em vista o cenário descrito, assinale a opção que apresenta um possível objetivo a ser alcançado de acordo com o planejamento do docente.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Compreender o funcionamento do barramento de sistema.",
+      "B": "Conhecer processos de fabricação de componentes de um computador.",
+      "C": "Aplicar técnicas de depuração de programas em linguagem de alto nível.",
+      "D": "Entender como um sistema operacional gerencia a paginação em memória virtual."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "Simuladores de arquitetura e organização de computadores permitem visualizar o fluxo de instruções, registradores, ULA, memória e barramentos de sistema (dados, endereços e controle).",
+      "distratores": "Processos físicos de fabricação de semicondutores (B), depuração de código em linguagens de alto nível (C) e gerenciamento de paginação pelo sistema operacional (D) não correspondem ao objetivo central de um simulador de organização básica de hardware."
+    }
+  },
+  {
+    "id": "ENADE2024-LC-Q47",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE (Licenciatura em Computação)",
+      "instituicao": "INEP",
+      "ano": 2024,
+      "numero_questao": 47
+    },
+    "enunciado": "Um Sistema Operacional (SO) é o software responsável por gerenciar os recursos de um computador ou de outros equipamentos eletrônicos. Um SO deve ser capaz de realizar várias funções, como o gerenciamento da memória, do sistema de arquivos, dos processos do sistema e dos dispositivos de entrada e saída (E/S). Uma vez que há uma grande variedade de dispositivos eletrônicos disponíveis, existem diferentes tipos de sistemas operacionais projetados e desenvolvidos para se adequarem às características do equipamento a ser gerenciado. São exemplos de sistemas os seguintes:\n• sistemas operacionais de computadores pessoais: são utilizados em equipamentos como desktops e notebooks;\n• sistemas operacionais portáteis: gerenciam os recursos de equipamentos como tablets e smartphones;\n• sistemas operacionais de servidores: são executados em computadores de grande porte, como servidores e mainframes;\n• sistemas operacionais embarcados: controlam dispositivos que não costumam ser vistos como computadores, como fornos de micro-ondas e lavadoras de roupa.\n\nA partir das informações apresentadas, assinale a opção que caracteriza o sistema operacional embarcado.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Oferece suporte à multiprogramação, embora seu trabalho seja proporcionar um bom apoio para um único usuário.",
+      "B": "Conta com apoio de processadores multinúcleo e quantidade de memória que possibilita instalar software de terceiros.",
+      "C": "Apresenta um design simplificado, pois todo software necessário para gerenciar o equipamento está instalado na memória ROM.",
+      "D": "Realiza tarefas orientadas para a execução de vários processos simultâneos, a maioria exigindo significativas quantidades de operações de E/S."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "De acordo com Tanenbaum e Bos (Sistemas Operacionais Modernos), sistemas operacionais embarcados operam em dispositivos dedicados com hardware restrito, sem permitir a instalação arbitrária de aplicativos de terceiros pelo usuário, tendo todo o software de controle gravado diretamente em memória ROM.",
+      "distratores": "A alternativa A descreve sistemas operacionais de computadores pessoais. A B caracteriza dispositivos portáteis e desktops modernos. A D descreve sistemas operacionais de servidores."
+    }
+  },
+  {
+    "id": "ENADE2024-LC-Q49",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE (Licenciatura em Computação)",
+      "instituicao": "INEP",
+      "ano": 2024,
+      "numero_questao": 49
+    },
+    "enunciado": "Uma escola recebeu de presente 6 computadores desktop para montar um laboratório para o ensino de informática. O professor da disciplina chamou seus alunos para que pudessem ajudá-lo a instalar os computadores e a estruturar a rede. A escola já tinha, no local, toda a mobília necessária, um roteador com acesso à Internet e as instalações do Windows e do Linux. A figura a seguir representa a rede de computadores criada no laboratório.\n\nCom base nas informações apresentadas, é correto afirmar que",
+    "imagem_url": "assets/q49.jpeg",
+    "alternativas": {
+      "A": "a rede formada apresenta a topologia anel e, por isso, os computadores foram configurados em um padrão circular.",
+      "B": "o mesmo sistema operacional foi instalado nos computadores para que eles pudessem se comunicar entre si.",
+      "C": "a Internet pode ser compartilhada entre os computadores do laboratório pelo fato de a rede estar utilizando comutação de pacotes.",
+      "D": "o pacote enviado pelo computador A chegará a todos os outros computadores do laboratório pelo fato de eles estarem interligados pelo mesmo roteador."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "A rede utiliza comutação de pacotes sobre a pilha TCP/IP, permitindo que os diferentes hosts do laboratório compartilhem dinamicamente o enlace de acesso à Internet por meio do roteador.",
+      "distratores": "A alternativa A é incorreta porque a topologia ilustrada é em estrela (nó central interligando os dispositivos), não em anel. A B é falsa porque a pilha TCP/IP garante interoperabilidade entre Windows e Linux. A D é falsa porque roteadores e switches encaminham pacotes ao destino específico, e não por difusão irrestrita."
+    }
+  },
+  {
+    "id": "ENADE2024-LC-Q54",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE (Licenciatura em Computação)",
+      "instituicao": "INEP",
+      "ano": 2024,
+      "numero_questao": 54
+    },
+    "enunciado": "Em computadores que rodam Sistema Operacional GNU/Linux (qualquer distribuição), a listagem dos processos existentes pode ser obtida com a execução do comando ps (process status). A imagem exibe essa execução.\n\nConsiderando que a coluna PRI apresenta a prioridade dos processos em tela, assinale a opção que indica o algoritmo de escalonamento que pode ser usado quando a maioria dos processos tem a mesma prioridade.",
+    "imagem_url": "assets/q54.jpeg",
+    "alternativas": {
+      "A": "Circular (round robin scheduling).",
+      "B": "FIFO (first-in-first-out).",
+      "C": "SJF (shortest-job-first).",
+      "D": "Cooperativo."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "Conforme o gabarito oficial do INEP, quando múltiplos processos na fila de prontos possuem a mesma prioridade, o algoritmo FIFO (First-In, First-Out) ordena a execução sequencialmente pela ordem de chegada na fila.",
+      "distratores": "O escalonamento Circular (A) utiliza fatias de tempo (quantum) com preempção periódica; o SJF (C) seleciona o processo com menor tempo estimado de CPU, independentemente da ordem de chegada; e o Cooperativo (D) depende da liberação voluntária do processador pelo próprio processo."
+    }
+  },
+  {
+    "id": "ENADE2024-LC-Q57",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE (Licenciatura em Computação)",
+      "instituicao": "INEP",
+      "ano": 2024,
+      "numero_questao": 57
+    },
+    "enunciado": "Em um sistema operacional projetado para processamento em lote (batch), serão executados apenas os processos A, B, C e D, cujos tempos de chegada e tempos totais necessários para processamento, dados em unidades de tempo, respectivamente, são conhecidos e estão dispostos na tabela a seguir.\n\n• Processo A — Tempo de chegada: 0 | Tempo total: 5\n• Processo B — Tempo de chegada: 0 | Tempo total: 2\n• Processo C — Tempo de chegada: 2 | Tempo total: 3\n• Processo D — Tempo de chegada: 4 | Tempo total: 2\n\nConsiderando que o sistema tenha apenas um processador e que o algoritmo de escalonamento utilizado seja o Próximo de Menor Tempo Restante (Shortest Remaining Time First), assinale a opção que indica a sequência na qual os processos deverão ser executados.",
+    "imagem_url": "assets/q57.jpeg",
+    "alternativas": {
+      "A": "A, B, C, D",
+      "B": "B, A, C, D",
+      "C": "B, C, D, A",
+      "D": "B, D, C, A"
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "No instante t = 0 chegam A (5) e B (2); B executa primeiro até t = 2 por ter menor tempo restante. Em t = 2 chega C (3); como C (3) tem tempo restante menor que A (5), C inicia execução. Em t = 4 chega D (2), mas C possui apenas 1 unidade de tempo restante (menor que D = 2 e A = 5), concluindo em t = 5. Em seguida executa D (2) até t = 7 e, por fim, A (5) até t = 12, resultando na sequência B, C, D, A.",
+      "distratores": "A alternativa A inicia pelo processo mais longo (A). A B não realiza a preempção de A quando C chega em t = 2. A D interrompe C erroneamente em t = 4, quando C já tinha tempo restante menor que D."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q22",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 22
+    },
+    "enunciado": "A tendência atual de desenvolver aplicações que possam ser utilizadas em nuvem otimiza o desempenho de máquinas locais, munidas de poucos recursos computacionais, em uma rede e garante a possibilidade desses computadores utilizarem outros recursos computacionais de maior desempenho, bem como a inserção de novos hosts neste ambiente computacional, sem comprometimento do sistema como um todo.\n\nEsse cenário pressupõe a utilização de sistema operacional com",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "arquitetura monolítica.",
+      "B": "arquiteturas em camadas.",
+      "C": "arquitetura monocamadas.",
+      "D": "arquiteturas cliente-servidor.",
+      "E": "arquiteturas de máquinas virtuais."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "Na arquitetura cliente-servidor de sistemas operacionais e distribuídos, as funções são divididas entre processos clientes leves em máquinas locais com poucos recursos e processos servidores remotos de alto desempenho, permitindo escalar novos hosts na rede sem comprometer a estabilidade global do sistema.",
+      "distratores": "Arquiteturas monolíticas (A) e em camadas (B) executam os serviços do núcleo localmente na mesma máquina. 'Arquitetura monocamadas' (C) não caracteriza o modelo distribuído em rede, e máquinas virtuais (E) abstraem hardware localmente, não definindo por si só o paradigma de requisição remota entre terminais leves e servidores."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q31",
+    "subarea": "Computação em Nuvem",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 31
+    },
+    "enunciado": "A cloud computing (computação em nuvem) tem o objetivo de fornecer recursos de hardware e software sob demanda a partir de servidores interligados pela internet, seguindo o princípio da computação em grid (grade). Uma arquitetura em grid é descrita por meio das quatro camadas a seguir.\n• Rede: executa a comunicação e se utiliza da parte física;\n• Recursos: formada pelos servidores de armazenamento e/ou processamento;\n• Middleware: formada pelo software responsável pela troca de informações;\n• Ferramentas e aplicações: representada pelos aplicativos.\n\nDe acordo com o texto, avalie as afirmações a seguir.\nI. A camada de ferramentas e aplicações é responsável pela negociação das transações de dados no grid.\nII. A camada middleware é responsável pela interconectividade e comunicação entre os membros do grid.\nIII. A camada de rede é responsável pela conectividade entre os diferentes membros do grid.\nIV. A camada de recursos é responsável pela segurança dos dados nas aplicações do grid.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "II e III.",
+      "C": "III e IV.",
+      "D": "I, II e IV.",
+      "E": "I, III e IV."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "As afirmações II e III estão corretas. Conforme a estrutura descrita, o middleware atua como camada de software intermediária responsável pela troca de informações e interconectividade lógica entre os membros do grid (II), enquanto a camada de rede assegura a comunicação e conectividade física entre os nós (III).",
+      "distratores": "A afirmação I é falsa porque a camada de ferramentas e aplicações corresponde aos softwares finais utilizados pelos usuários, e não à negociação de baixo nível das transações. A afirmação IV é falsa porque a camada de recursos fornece infraestrutura de processamento e armazenamento, não os mecanismos de segurança das aplicações."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q33",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 33
+    },
+    "enunciado": "Tendo em vista que a informação está entre os bens mais importantes para uma organização, um dos fatores decisivos na definição de uma rede de computadores é a segurança da informação. Para garantir tal segurança e evitar qualquer desvio ou ação que possa modificar essas informações sem autorização ou, ainda, para protegê-las de ataques cibernéticos, são necessários planejamentos e estruturação da rede e de seus acessos.\n\nConsiderando o texto, avalie as afirmações a seguir.\nI. A proteção da informação em uma organização é competência restrita à área de tecnologia, que assume total responsabilidade sobre sua segurança.\nII. A proteção da informação exige postura e comprometimento dos envolvidos na sua execução, portanto, deve ser tratada de forma profissional.\nIII. A presença de funcionários éticos na empresa elimina a necessidade de investimentos na área de segurança da informação.\nIV. Os ataques cibernéticos são cada dia mais frequentes, por isso, a segurança da informação deve ser considerada essencial.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "II, apenas.",
+      "B": "I e III, apenas.",
+      "C": "II e IV, apenas.",
+      "D": "I, III e IV, apenas.",
+      "E": "I, II, III e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações II e IV estão corretas. A segurança da informação exige governança profissional, políticas formais e comprometimento contínuo de todos os envolvidos nos processos (II), sendo um requisito essencial diante da crescente frequência e sofisticação dos ataques cibernéticos (IV).",
+      "distratores": "A afirmação I é incorreta porque a proteção da informação é responsabilidade compartilhada por toda a organização (pessoas, processos e tecnologia), não exclusiva da área de TI. A afirmação III é incorreta porque a conduta ética dos colaboradores não substitui investimentos em controles técnicos, defesa perimetral e prevenção contra ameaças externas."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q34",
+    "subarea": "Arquitetura de Computadores",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 34
+    },
+    "enunciado": "No contexto de arquitetura e organização de computadores, o termo cluster é usado para designar um grupo de computadores interconectados, trabalhando como um recurso de computação unificado. Cada computador pertencente ao cluster é usualmente denominado nó. Clusters costumam ser utilizados em ambientes corporativos, sendo particularmente adequados para aplicações baseadas em servidores.\n\nConsiderando as informações apresentadas, avalie as afirmações a seguir.\nI. Uma falha em um nó de um cluster implica em perda total de serviço.\nII. A interligação entre os nós de um cluster realiza-se por meio de um barramento de controle.\nIII. A escalabilidade de um cluster é maior do que a de um processador com múltiplos núcleos.\nIV. A relação custo/desempenho de um cluster é melhor do que a de uma única máquina de grande porte.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e III.",
+      "B": "II e IV.",
+      "C": "III e IV.",
+      "D": "I, II e III.",
+      "E": "I, II e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações III e IV estão corretas, conforme William Stallings (Arquitetura e Organização de Computadores). Clusters possuem escalabilidade incremental superior à de um único processador multicore (permitindo adicionar novos nós conforme a demanda) (III) e alcançam melhor relação custo/desempenho do que uma única máquina de grande porte ao empregar servidores padrão interligados (IV).",
+      "distratores": "A afirmação I é falsa porque uma das principais vantagens de um cluster é a alta disponibilidade: caso um nó falhe, os demais nós assumem a carga sem interrupção total do serviço. A afirmação II é falsa porque os nós de um cluster são máquinas independentes interconectadas por redes de alta velocidade (switches/enlaces), e não por um barramento interno de controle."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q16",
+    "subarea": "Computação em Nuvem",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 16
+    },
+    "enunciado": "A virtualização de servidores, acompanhada de solução para Gerenciamento Eletrônico de Documentos (GED), trouxe uma série de benefícios para as escolas de uma instituição: acumulados ao longo de 50 anos, os prontuários dos estudantes passaram a ser acessados em tempo real, as atividades pedagógicas realizadas em ambiente mais sólido e o gerenciamento centralizado do ambiente passou a permitir que a equipe da instituição se concentre em tarefas estratégicas. No médio prazo, a meta da instituição é virtualizar toda a infraestrutura de servidores e eliminar o uso de papel nos processos, trocando documentos em papel por documentos eletrônicos armazenados nos servidores virtuais e acessíveis em qualquer unidade da rede de escolas.\n\nEm relação ao estudo de caso mencionado acima, avalie as asserções a seguir e a relação proposta entre elas.\nI. A tecnologia de virtualização de servidores está proporcionando diversos benefícios para as organizações, como redução de custos e de downtime e melhoria no desempenho, na segurança e no gerenciamento da infraestrutura de Tecnologia da Informação (TI). No entanto, sozinha, a virtualização não é suficiente para permitir que as organizações se concentrem em tarefas estratégicas.\nPORQUE\nII. A virtualização, se associada a outras tecnologias atuais como GED, Cloud Computing e Grid Computing, possibilita que as organizações foquem no negócio, eliminando os riscos associados à área de TI.\n\nA respeito dessas asserções, assinale a opção correta.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.",
+      "B": "As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.",
+      "C": "A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.",
+      "D": "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
+      "E": "As asserções I e II são proposições falsas."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "A asserção I é verdadeira porque a virtualização consolida servidores e reduz custos operacionais, mas, isoladamente, não automatiza processos documentais nem libera a equipe para tarefas estratégicas sem soluções complementares como o GED. A asserção II é falsa porque nenhuma combinação tecnológica elimina completamente os riscos associados à área de TI — os riscos podem ser mitigados e gerenciados, mas nunca eliminados por completo.",
+      "distratores": "As alternativas A, B e D estão incorretas por classificarem a asserção II como verdadeira, desconsiderando a impossibilidade de eliminação total de riscos em ambientes de TI. A alternativa E erra ao invalidar a asserção I."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q17",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 17
+    },
+    "enunciado": "Os estados que um processo alcança podem ser modelados por meio do diagrama exibido a seguir.\n\nNo diagrama de estados apresentado, as transições causadas pelo escalonador de processos são",
+    "imagem_url": "assets/q17.jpeg",
+    "alternativas": {
+      "A": "1 e 2.",
+      "B": "1 e 3.",
+      "C": "1 e 4.",
+      "D": "2 e 3.",
+      "E": "2 e 4."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "Conforme o modelo clássico de estados de processo de Tanenbaum (Sistemas Operacionais Modernos), as transições controladas diretamente pelo escalonador de processos são a 2 (Executando → Pronto, quando o escalonador realiza preempção ou expira a fatia de tempo da CPU) e a 3 (Pronto → Executando, quando o escalonador seleciona e despacha o próximo processo apto para a CPU).",
+      "distratores": "A transição 1 (Executando → Bloqueado) ocorre por iniciativa do próprio processo ao aguardar uma operação de E/S ou evento externo. A transição 4 (Bloqueado → Pronto) ocorre quando o evento ou operação de E/S aguardada é concluída, sem intervenção direta do escalonador."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q19",
+    "subarea": "Sistemas Operacionais",
+    "nivel_dificuldade": "Avançado",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 19
+    },
+    "enunciado": "Um analista de sistemas usa um computador para executar apenas 2 tipos de operações: processamento lógico/aritmético e acesso a disco. O computador é um servidor com apenas um processador de um núcleo (core). Além do sistema operacional multitarefa e dos processos do sistema, tal servidor serializa os acessos a disco e é usado para executar apenas os programas que o analista solicita. O analista trabalha com dois tipos de programas: aqueles que realizam em torno de 100% de operações lógicas/aritméticas (quantidade desprezível de acesso a disco), denominados cpu-bound, e aqueles que executam em torno de 70% de acesso a disco e 30% de operações lógicas/aritméticas, denominados io-bound. Certa vez, o analista executou alguns programas isoladamente e mediu os tempos de execução de cada um. Os dados obtidos foram registrados na tabela I. Em seguida, ele combinou programas e os submeteu simultaneamente em grupos. Os resultados foram registrados na tabela II.\n\nTabela I:\n• P01 (CPU-BOUND): 20 ut\n• P02 (CPU-BOUND): 40 ut\n• P03 (CPU-BOUND): 60 ut\n• P04 (IO-BOUND): 50 ut\n• P05 (IO-BOUND): 100 ut\n• P06 (IO-BOUND): 150 ut\n\nTabela II:\n• Grupo 1 (P01 + P02 + P03): 123 ut\n• Grupo 2 (P04 + P05 + P06): 210 ut\n• Grupo 3 (P03 + P05 + P06): 160 ut\n• Grupo 4 (Todos): 306 ut\n\nDias depois, revendo as tabelas, ele teve dúvida quanto à correção dos tempos anotados. Considere ut = unidade de tempo. Com relação a essa situação, avalie as afirmações a seguir.\nI. É possível que o tempo total do grupo 4 seja 306 ut.\nII. O tempo total do grupo 1 deveria ser, no mínimo, de 100 ut.\nIII. O tempo total do grupo 2 deveria ser, no mínimo, de 300 ut.\nIV. O tempo total do grupo 3 deveria estar acima de 175 e abaixo de 310 ut.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "III, apenas.",
+      "B": "I e II, apenas.",
+      "C": "I e IV, apenas.",
+      "D": "II, III e IV, apenas.",
+      "E": "I, II, III e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações I e IV estão corretas. No Grupo 4 (todos os processos), a carga total de CPU é 20 + 40 + 60 + 15 + 30 + 45 = 210 ut e a carga total de disco é 35 + 70 + 105 = 210 ut; com sobreposição entre CPU e disco, o tempo mínimo teórico é 210 ut e o máximo sequencial é 420 ut, tornando 306 ut plenamente plausível (I). No Grupo 3 (P03 + P05 + P06), os acessos serializados a disco exigem sozinhos 0 + 70 + 105 = 175 ut, além da sobrecarga do SO (> 175 ut), enquanto a execução sem sobreposição somaria 60 + 100 + 150 = 310 ut, invalidando o registro de 160 ut (IV).",
+      "distratores": "A afirmação II é falsa porque os três processos do Grupo 1 são 100% CPU-bound em um processador single-core, exigindo no mínimo 20 + 40 + 60 = 120 ut (e não 100 ut). A afirmação III é falsa porque no Grupo 2 a CPU (90 ut totais) pode operar em paralelo com o disco serializado (210 ut totais), resultando em tempo mínimo teórico de 210 ut, e não 300 ut."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q20",
+    "subarea": "Redes de Computadores",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 20
+    },
+    "enunciado": "A Internet se encontra organizada em Sistemas Autônomos (SA), que são administrados autonomamente por uma entidade ou organização. Para que uma comunicação ocorra com sucesso entre hospedeiros situados em SAs diferentes, é necessário que pacotes sejam eficientemente transportados do SA origem ao SA destino. Protocolos de roteamento são responsáveis pelo estabelecimento de rotas a serem seguidas pelos pacotes. Para que essas rotas sejam estabelecidas, deve-se usar",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Border Gateway Protocol (BGP).",
+      "B": "Open Shortest Path First (OSPF).",
+      "C": "Routing Information Protocol (RIP).",
+      "D": "Interior Gateway Routing Protocol (IGRP).",
+      "E": "Intermediate System To Intermediate System (IS-IS)."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "O Border Gateway Protocol (BGP) é o protocolo padrão de roteamento externo (EGP — Exterior Gateway Protocol) da Internet, responsável por trocar informações de alcançabilidade e estabelecer rotas entre diferentes Sistemas Autônomos (inter-AS).",
+      "distratores": "Os protocolos OSPF (B), RIP (C), IGRP (D) e IS-IS (E) são protocolos de roteamento interno (IGP — Interior Gateway Protocols), utilizados exclusivamente para roteamento intradominio dentro de um mesmo Sistema Autônomo."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q22",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 22
+    },
+    "enunciado": "As transações eletrônicas na Internet precisam de mecanismos de segurança capazes de garantir autenticidade, confidencialidade e integridade das informações.\n\nCom relação a esse contexto, avalie as afirmações a seguir.\nI. Criptografia assimétrica é um método em que é utilizado um par de chaves: uma pública e uma privada.\nII. Certificado digital é um documento eletrônico assinado digitalmente que permite associar uma pessoa ou entidade a uma chave pública.\nIII. Assinatura digital é um método de autenticação de informação digital tipicamente tratado como análogo à assinatura física em papel.\nIV. VPN (Virtual Private Network) é um dispositivo de uma rede de computadores por meio do qual se aplica uma política de segurança a determinado ponto da rede.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e IV.",
+      "C": "III e IV.",
+      "D": "I, II e III.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "As afirmações I, II e III estão corretas: a criptografia assimétrica baseia-se em pares matematicamente vinculados de chave pública e chave privada (I); o certificado digital emitido por uma Autoridade Certificadora vincula a identidade de um titular à sua chave pública (II); e a assinatura digital assegura autenticidade, integridade e não repúdio de documentos eletrônicos (III).",
+      "distratores": "A afirmação IV está incorreta porque descreve o conceito de firewall (dispositivo ou software que aplica políticas de filtragem de tráfego em pontos da rede), e não de VPN, que consiste em uma rede privada virtual estabelecida por tunelamento criptografado sobre uma rede pública."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q23",
+    "subarea": "Infraestrutura de TI",
+    "nivel_dificuldade": "Avançado",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 23
+    },
+    "enunciado": "Uma companhia com abrangência global decidiu implantar um novo sistema de compartilhamento de informações empresariais. Após estudos de campo, a empresa identificou alguns cenários de utilização das informações. No primeiro cenário, detectou-se que um volume massivo de dados relativos a documentos históricos, normas e regulamentos da organização eram consumidos, em escala global, exclusivamente para leitura. No segundo cenário, verificou-se que documentos eram produzidos de forma colaborativa por equipes regionais de colaboradores. Esses colaboradores, na maioria das vezes, estavam na mesma filial ou geograficamente muito próximos. O terceiro cenário envolvia apenas 10% dos documentos da empresa, acessados concorrentemente por todas as regionais do globo, tanto para leitura quanto para atualização.\n\nCom base nesses cenários e em relação às arquiteturas de software distribuídas coerentemente com as necessidades da empresa, avalie as afirmações a seguir.\nI. A utilização de arquitetura peer-to-peer (P2P) para disponibilizar os documentos do cenário 1 poderá reduzir o consumo da rede.\nII. O compartilhamento baseado no modelo cliente-servidor com cache no cliente pode aumentar o desempenho da edição colaborativa, sem comprometer a consistência no cenário 2.\nIII. A utilização de replicação baseada em cópia primária pode aumentar a escalabilidade do sistema, sem comprometer, de forma significativa, a consistência de dados no cenário 3.\nIV. Se o modelo cliente-servidor de compartilhamento for empregado no cenário 2, a replicação passiva (backup ou mirroring) poderá ser utilizada como mecanismo de tolerância a falhas.\nV. A arquitetura peer-to-peer baseada em rede overlay, tal como o DHT, pode oferecer transparência de migração para os documentos compartilhados no cenário 1.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "III, apenas.",
+      "B": "I e II, apenas.",
+      "C": "II, IV e V, apenas.",
+      "D": "I, III, IV e V, apenas.",
+      "E": "I, II, III, IV e V."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "Todas as cinco afirmações estão corretas à luz dos princípios de Sistemas Distribuídos (Tanenbaum e Van Steen): redes P2P distribuem a largura de banda na entrega massiva de conteúdo somente leitura (I); o cache no cliente com controle de invalidação acelera o trabalho colaborativo local mantendo a consistência (II); a replicação baseada em cópia primária serializa as escritas concorrentes globais preservando a consistência sequencial (III); a replicação passiva (espelhamento/backup) provê tolerância a falhas em servidores regionais (IV); e tabelas hash distribuídas (DHT) abstraem a localização física dos nós, garantindo transparência de migração (V).",
+      "distratores": "As alternativas A, B, C e D são incompletas por omitirem uma ou mais estratégias arquiteturais válidas para os cenários distribuídos apresentados."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q29",
+    "subarea": "Segurança da Informação",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 29
+    },
+    "enunciado": "Na auditoria externa independente, contratada por uma empresa para verificar o plano de contingência e recuperação de desastres, é necessário analisar",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "os sistemas de backup e a facilidade de recuperação dos dados.",
+      "B": "os registros de tentativas de violação de segurança nos sistemas.",
+      "C": "os pontos de vulnerabilidade na rede de computadores da empresa.",
+      "D": "a documentação dos sistemas de informação da empresa e sua utilidade para os usuários.",
+      "E": "os mecanismos de monitoramento dos sistemas de informação que permitam identificar problemas de desempenho."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "A auditoria de planos de continuidade de negócios e recuperação de desastres (DRP) avalia diretamente a integridade, periodicidade, armazenamento externo e testabilidade das rotinas de backup, bem como o tempo e a eficácia dos procedimentos de restauração dos dados após incidentes críticos.",
+      "distratores": "Logs de tentativas de intrusão (B) e análise de vulnerabilidades de rede (C) pertencem a auditorias de segurança operacional e testes de invasão; manuais de usuário (D) referem-se à documentação funcional; e monitoramento de performance (E) diz respeito à gestão de capacidade e disponibilidade operacional cotidiana."
+    }
+  }
+]
