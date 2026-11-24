@@ -1,0 +1,901 @@
+[
+  {
+    "id": "ENADE2017-SI-Q09",
+    "subarea": "Engenharia de Requisitos",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 9
+    },
+    "enunciado": "Na fase de levantamento de requisitos do processo de desenvolvimento de software, devem-se identificar as regras de negócio, os requisitos funcionais e os requisitos não funcionais do sistema. Considerando um cenário em que um vendedor de sorvetes tenha o objetivo de gerenciar suas vendas com o uso de um aplicativo, avalie os itens a seguir.\n\nI. Regra de negócio: entregar o sorvete ao cliente somente mediante pagamento; requisito funcional: reabastecer o estoque quando a quantidade de sorvetes atingir o mínimo; requisito não funcional: especificar o tempo de resposta do aplicativo.\nII. Regra de negócio: aplicar promoções vigentes na realização da venda; requisito funcional: calcular a quantidade de sorvetes no estoque; requisito não funcional: exibir relatório com o balanço de vendas.\nIII. Regra de negócio: aceitar somente pagamentos com cartão de débito ou crédito; requisito funcional: consultar a quantidade de vendas; requisito não funcional: verificar a possibilidade de indisponibilidade do sistema.\nIV. Regra de negócio: conceder aos clientes que comprarem 2 sorvetes um desconto de 10%; requisito funcional: processar a venda do sorvete; requisito não funcional: verificar o tempo gasto com o treinamento para a utilização do aplicativo.\n\nÉ correto apenas o que se descreve em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "II e III.",
+      "C": "III e IV.",
+      "D": "I, II e IV.",
+      "E": "I, III e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "Apenas os itens III e IV classificam corretamente todos os elementos. No item III, a restrição de meio de pagamento é uma regra de negócio, consultar vendas é uma função do sistema (RF) e a disponibilidade/indisponibilidade é um atributo de qualidade (RNF). No item IV, a política de desconto é regra de negócio, processar a venda é requisito funcional e o tempo de treinamento refere-se à usabilidade (RNF).",
+      "distratores": "No item I, 'reabastecer o estoque quando atingir o mínimo' descreve uma atividade operacional/regra de negócio externa, não uma funcionalidade do aplicativo. No item II, 'exibir relatório com o balanço de vendas' é um requisito funcional, e não um requisito não funcional."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q16",
+    "subarea": "Processos e Métodos Ágeis",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 16
+    },
+    "enunciado": "O processo de design de interação possui quatro atividades básicas: identificar as necessidades e estabelecer requisitos, desenvolver designs alternativos que preencham estes requisitos, construir versões interativas dos designs e avaliação.\n\nNesse contexto, avalie as afirmações a seguir.\nI. O processo de design de interação é complementar aos modelos de ciclo de vida de desenvolvimento de software.\nII. A participação do usuário do sistema no processo de design de interação é dispensável, uma vez que os desenvolvedores conhecem todas as regras referentes ao web design.\nIII. A observação de designs de interação desenvolvidos por outros profissionais motiva os designers para soluções alternativas.\nIV. A prototipação é uma técnica para facilitar o feedback do usuário nas etapas do processo de design de interação.\n\nÉ correto apenas o que afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I.",
+      "B": "II e IV.",
+      "C": "I, II e III.",
+      "D": "I, III e IV.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "As afirmações I, III e IV estão corretas. O design de interação integra-se aos ciclos de vida de engenharia de software (cascata, iterativo ou ágil) (I), beneficia-se da análise de soluções existentes como inspiração para alternativas de projeto (III) e utiliza protótipos interativos para validar requisitos e obter retorno rápido dos usuários (IV).",
+      "distratores": "A afirmação II é falsa porque o design de interação é centrado no usuário (UCD), tornando indispensável a participação ativa dos usuários reais durante o levantamento de necessidades e avaliações."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q17",
+    "subarea": "Testes de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 17
+    },
+    "enunciado": "Uma equipe de projeto desenvolveu um aplicativo mobile para a gestão de frotas de caminhões entre os meses de janeiro e junho de 2017. O projeto seguiu um processo baseado no modelo de ciclo de vida de desenvolvimento em cascata, com atividades realizadas sequencialmente e sem sobreposição. Ao final do projeto, a equipe precisou tratar uma grande quantidade de defeitos encontrados no aplicativo em um curto espaço de tempo. Como mostra o gráfico a seguir, a maior parte dos defeitos foi identificada ao final do projeto, o que elevou o risco de se entregar o aplicativo com muitos defeitos ao cliente.\n\nDiante desse cenário, a equipe do projeto decidiu que, em novos projetos, realizaria ações que pudessem distribuir o esforço de tratamento de defeitos ao longo dos meses, diminuindo o risco de ainda haver muitos defeitos não tratados no momento próximo à entrega do produto.\n\nConsiderando a situação, o gráfico apresentado e o modelo de ciclo de vida de desenvolvimento utilizado no projeto (cascata), assinale a opção que descreve uma ação capaz de produzir o resultado esperado pela equipe.",
+    "imagem_url": "assets/img/enade2017_si_q17.png",
+    "alternativas": {
+      "A": "Realizar testes assim que o aplicativo estiver pronto para uso.",
+      "B": "Aplicar técnicas de verificação e validação desde o início do projeto.",
+      "C": "Mapear e documentar o processo de desenvolvimento utilizado e comunicá-lo à equipe.",
+      "D": "Elicitar e documentar os requisitos funcionais e não funcionais do produto logo no início do projeto.",
+      "E": "Registrar, evidenciar e comunicar imediatamente os defeitos encontrados aos demais membros da equipe."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "Aplicar atividades contínuas de verificação e validação (V&V) — como revisões técnicas formais de requisitos, inspeções de projeto e testes unitários/integrados desde as fases iniciais — permite detectar e corrigir defeitos cedo, evitando o acúmulo crítico na etapa final do modelo em cascata.",
+      "distratores": "Testar apenas quando o aplicativo estiver pronto (A) reproduz exatamente o problema descrito. Documentar o processo (C) ou apenas elicitar requisitos sem revisá-los (D) não detecta falhas antecipadamente, e apenas registrar defeitos quando encontrados no fim (E) não distribui o esforço ao longo do ciclo."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q21",
+    "subarea": "Modelagem de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 21
+    },
+    "enunciado": "Uma startup de tecnologia pretende desenvolver um aplicativo que aproxime empresas que precisam transportar mercadorias de condutores autônomos de veículos de carga (transportadores). O uso do aplicativo permitirá um aumento do número potencial de transportadores e de tipos de veículos, bem como o compartilhamento de frete, com redução do custo de transporte e do custo de armazenamento de mercadorias pelas empresas. Além disso, a visibilidade da disponibilidade dos transportadores pelo aplicativo pode aumentar suas possibilidades de negócios. Durante a concepção e o projeto do aplicativo, foram elaborados modelos UML (Unified Modeling Language), sendo um deles o diagrama de atividades, conforme apresentado na figura a seguir.\n\nCom base no diagrama apresentado, avalie as afirmações a seguir.\nI. Os serviços oferecidos por outros aplicativos, como mapas para o cálculo de rotas, por exemplo, poderão ser usados no desenvolvimento do aplicativo, mesmo que não tenham sido representados no diagrama.\nII. Os fluxos paralelos indicados nos pontos de decisão 2 e 3 levam a erros no funcionamento do aplicativo, uma vez que permitem a continuidade do processo mesmo que não haja rota, destino ou tipo de veículo adequado.\nIII. O diagrama apresenta atividades desempenhadas pela 'Empresa que precisa de transporte' e pelo 'Transportador', no entanto, as atividades que precisarão ser modeladas no sistema restringem-se às desempenhadas pelo 'Aplicativo'.\nIV. As ações 'Informar indisponibilidade' e 'Confirmar disponibilidade' correspondem a funcionalidades distintas no sistema, visto que a primeira se relaciona à existência de tipo de veículo, rota e destino e a segunda se relaciona à agenda do transportador.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": "assets/img/enade2017_si_q21.png",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e IV.",
+      "C": "II e III.",
+      "D": "I, III e IV.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "As afirmações I e IV estão corretas. Um diagrama de atividades modela o fluxo de negócio e controle sem exigir detalhamento de APIs externas de apoio, como serviços de mapas (I). Além disso, 'Informar indisponibilidade' decorre da verificação automática de compatibilidade de rota e tipo de veículo no aplicativo, enquanto 'Confirmar disponibilidade' depende do aceite operacional do transportador (IV).",
+      "distratores": "A afirmação II é falsa porque os pontos de decisão 2 e 3 direcionam fluxos inválidos para 'Informar indisponibilidade' (encerrando o fluxo), e a barra de sincronização (join) só prossegue quando ambos os ramos válidos são satisfeitos. A III é falsa porque as ações nas raias da Empresa e do Transportador também demandam interfaces e eventos no sistema."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q27",
+    "subarea": "Processos e Métodos Ágeis",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 27
+    },
+    "enunciado": "A forma como o conhecimento se apresenta pode ser classificada em tácita e explícita. O conhecimento tácito é desenvolvido pelas experiências e relacionamentos pessoais ou profissionais de um indivíduo, não é mensurável e é pessoal. O conhecimento explícito é a disseminação, aplicação, transmissão, de maneira formal, do conhecimento adquirido.\n\nConsiderando o desenvolvimento de software e a utilização do conhecimento tácito e explícito, avalie as afirmações a seguir.\nI. Durante as etapas de desenvolvimento do software, são utilizados tanto os conhecimentos pré-existentes do indivíduo quanto os conhecimentos adquiridos durante o desenvolvimento.\nII. O uso do conhecimento explícito restringe-se às fases de levantamento dos requisitos, quando o usuário indica sua necessidade e as funcionalidades requeridas para o desenvolvimento do software.\nIII. O uso do conhecimento tácito restringe-se às fases de desenvolvimento, quando se emprega conhecimento de transformação da necessidade do usuário e características técnicas para produzir um sistema de informação.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "III, apenas.",
+      "C": "I e II, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "Apenas a afirmação I está correta. A engenharia de software é uma atividade intensiva em conhecimento na qual os profissionais combinam continuamente experiências prévias (tácitas) e documentação/técnicas formalizadas (explícitas) aprendidas ao longo de todo o ciclo de vida do projeto.",
+      "distratores": "As afirmações II e III são falsas porque ambos os tipos de conhecimento (tácito e explícito) permeiam todas as etapas do processo de software — desde a elicitação de requisitos até codificação, testes e manutenção — não ficando restritos a uma única fase."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q28",
+    "subarea": "Engenharia de Requisitos",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 28
+    },
+    "enunciado": "O guia PMBOK (Project Management Body of Knowledge) orienta a gestão de projetos considerando que processos devem ser executados nas diversas fases do gerenciamento, a saber: iniciação, planejamento, execução e encerramento.\n\nEm um determinado projeto, foi desenvolvido um sistema segundo o modelo de ciclo de vida em cascata, cujas atividades são realizadas sequencialmente e sem sobreposição. Na atividade de homologação do sistema, às vésperas da data planejada de sua implantação, um usuário identificou a inviabilidade de uma funcionalidade testada, pois alguns requisitos básicos não haviam sido considerados durante o levantamento dos requisitos. A alteração que se mostrou necessária atrasou o projeto em relação à linha de base do plano do projeto.\n\nSegundo o PMBOK, pode-se considerar que a falha foi originada na fase de",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "iniciação ou planejamento, em um processo da área de conhecimento gestão do tempo.",
+      "B": "planejamento ou execução, em um processo da área de conhecimento gestão do tempo.",
+      "C": "execução ou encerramento, em um processo da área de conhecimento gestão do tempo.",
+      "D": "iniciação ou encerramento, em um processo da área de conhecimento gestão do escopo.",
+      "E": "planejamento ou execução, em um processo da área de conhecimento gestão do escopo."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "A omissão de requisitos básicos durante o levantamento e a falta de validação intermediária junto ao usuário pertencem à área de conhecimento de Gestão do Escopo do Projeto (processos de Coletar os Requisitos, Definir o Escopo e Validar o Escopo), os quais ocorrem nos grupos de processos de Planejamento e Execução/Monitoramento.",
+      "distratores": "O atraso no cronograma foi apenas a consequência da falha, e não sua origem em Gestão do Tempo (A, B e C). A alternativa D erra ao situar o levantamento e a validação detalhada de requisitos nas fases de iniciação ou encerramento."
+    }
+  },
+  {
+    "id": "ENADE2017-SI-Q30",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2017,
+      "numero_questao": 30
+    },
+    "enunciado": "Para garantir a qualidade no desenvolvimento de software é indispensável definir processos para gerenciar mudanças no escopo do produto e configurações do software em desenvolvimento. Esses processos incluem atividades de planejamento, validação, verificação e gerenciamento de versões (mudanças ou releases).\n\nConsiderando as informações apresentadas, avalie as afirmações a seguir.\nI. O gerenciamento de mudanças acompanha a solicitação de alterações no software, define os custos, seus impactos e quando estas devem ser implementadas.\nII. A revisão dos artefatos de software tem por objetivo armazenar a documentação em um repositório central.\nIII. A verificação de software tem o objetivo de controle de versões da documentação.\nIV. A validação de software tem o objetivo de garantir que as necessidades e expectativas do cliente sejam atendidas.\nV. O gerenciamento de configuração controla a edição simultânea dos artefatos do software, mantém o controle das versões do software e recomenda a auditoria das configurações.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, II e III.",
+      "B": "I, II e IV.",
+      "C": "I, IV e V.",
+      "D": "II, III e V.",
+      "E": "III, IV e V."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações I, IV e V estão corretas. O gerenciamento de mudanças avalia solicitações, custos, impactos e agendamento (I); a validação assegura que o produto construído atende às necessidades reais do cliente ('estamos construindo o produto certo?') (IV); e o gerenciamento de configuração controla versões, concorrência de edição e auditoria de artefatos (V).",
+      "distratores": "A afirmação II é falsa porque revisar artefatos visa detectar defeitos e inconsistências (garantia da qualidade), não apenas armazená-los. A afirmação III é falsa porque a verificação avalia se o software está em conformidade com suas especificações ('estamos construindo o produto corretamente?'), e não o controle de versões."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q24",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 24
+    },
+    "enunciado": "Uma empresa mantém um serviço de software que atende a centenas de clientes pelo mundo. O serviço é bastante complexo e requer um esforço contínuo de manutenção. Para melhor gerenciar a manutenção do sistema, a empresa decidiu implantar um programa de medição, em que várias métricas foram agregadas, cada uma delas associada a determinada questão que se desejava responder. A tabela a seguir apresenta as questões e suas métricas associadas.\n\n• Quantos problemas afetam os clientes? — Número de solicitações de mudanças\n• Quanto tempo é necessário para se corrigir um problema urgente? — Tempo entre levantamento do problema e aceitação da mudança\n• Quanto custa uma entrega de manutenção? — Custo por entrega\n• Como são alocados os custos? — Custo por atividade\n• Que tipos de mudanças são feitas? — Número de mudanças por tipo\n• Quanto esforço é despendido por tipo de mudança? — Pessoas-dia gastos, agregados por tipo\n• Quão difícil é a entrega? — Número de recursos computacionais a serem utilizados\n\nO objetivo atual da empresa é reduzir o prazo de suas entregas, sem comprometer o que foi acordado com o cliente. A métrica que permite avaliar se esse objetivo está sendo atingido é o",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "custo por entrega.",
+      "B": "número de mudanças por tipo.",
+      "C": "número de solicitações de mudanças.",
+      "D": "número de recursos computacionais a serem utilizados.",
+      "E": "tempo entre levantamento do problema e aceitação da mudança."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "Segundo a abordagem GQM (Goal-Question-Metric) apresentada na tabela, a única métrica diretamente vinculada à dimensão temporal do ciclo de manutenção — desde a identificação da demanda até a entrega validada pelo cliente — é o 'tempo entre levantamento do problema e aceitação da mudança'.",
+      "distratores": "As demais métricas avaliam custos financeiros (A), categorização/volume de demandas (B e C) ou complexidade/capacidade de infraestrutura (D), não medindo o prazo de entrega."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q25",
+    "subarea": "Engenharia de Requisitos",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 25
+    },
+    "enunciado": "No desenvolvimento de um certo produto de software, foi determinado que um dos requisitos do produto seria a exibição de informações em planilhas eletrônicas. Contudo, durante uma reunião de revisão, a equipe do projeto verificou que esse formato não facilitava a interpretação das informações e sugeriu que fosse construído um gráfico, que permitiria a identificação mais rápida de informações importantes. Diante desse fato, o gerente do projeto deve",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "autorizar a equipe do projeto a implementar o gráfico e registrar a mudança.",
+      "B": "solicitar à equipe do projeto que ignore a sugestão, uma vez que ela está fora do escopo definido.",
+      "C": "analisar o impacto da modificação e submetê-la à aprovação do cliente, independentemente da relevância do impacto.",
+      "D": "analisar o impacto da modificação e, somente se o impacto no projeto for grande, submetê-la à aprovação do cliente.",
+      "E": "autorizar a equipe do projeto a implementar o gráfico e desprezar o registro da mudança, atendendo à recomendação de que sejam rastreadas apenas mudanças cujo impacto seja significativo no custo ou nos prazos do projeto."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "Em processos formais de gerência de requisitos e controle de mudanças, qualquer alteração sobre um requisito previamente especificado e acordado deve passar por análise de impacto (prazo, custo e arquitetura) e ser formalmente submetida à aprovação do cliente/patrocinador antes da implementação.",
+      "distratores": "Implementar alterações no escopo sem aprovação formal do cliente (A, D e E) caracteriza scope creep (aumento descontrolado do escopo), enquanto descartar sumariamente melhorias identificadas pela equipe (B) prejudica a qualidade do produto."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q26",
+    "subarea": "Qualidade de Software",
+    "nivel_dificuldade": "Avançado",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 26
+    },
+    "enunciado": "Uma empresa de desenvolvimento de software está sendo avaliada no nível E do MPS.BR. O grupo de melhoria de processos fez um levantamento para avaliar as práticas relacionadas à gerência de recursos humanos e obteve as evidências a seguir.\n\nEvidência 1. A empresa possui um processo de avaliação de desempenho e promoção de indivíduos bem estabelecido, em plano de cargos e carreira.\nEvidência 2. A empresa contrata externamente instrutores capacitados para realizar treinamentos internos a seus funcionários sempre que verifica a necessidade de ampliar a capacitação da equipe. Esses treinamentos, registrados como parte do portfólio de cada funcionário, são avaliados pelos funcionários em relação à sua qualidade e aderência às necessidades de capacitação da equipe. Cada funcionário também é avaliado ao final de cada treinamento.\n\nDe acordo com o Modelo de Referência do MPS.BR, alguns dos resultados esperados para o processo de Gerência de Recursos Humanos são:\nGRH 6. Os treinamentos identificados como sendo responsabilidade da organização são conduzidos e registrados;\nGRH 7. A efetividade do treinamento é avaliada;\nGRH 8. Critérios objetivos para avaliação do desempenho de grupos e indivíduos são definidos e monitorados para prover informações sobre o desempenho e melhorá-lo.\n\nCom base no levantamento inicial das práticas da empresa, verifica-se que a evidência 1",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "atende totalmente ao GRH 8, enquanto a evidência 2 atende totalmente ao GRH 6 e ao GRH 7.",
+      "B": "atende parcialmente ao GRH 8, enquanto a evidência 2 atende totalmente ao GRH 6 e ao GRH 7.",
+      "C": "atende parcialmente ao GRH 8, enquanto a evidência 2 atende parcialmente ao GRH 6 e ao GRH 7.",
+      "D": "atende totalmente ao GRH 8, enquanto a evidência 2 não atende ao GRH 6, mas atende totalmente ao GRH 7.",
+      "E": "atende parcialmente ao GRH 8, enquanto a evidência 2 atende totalmente ao GRH 6, mas não atende ao GRH 7."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "A Evidência 1 contempla apenas a avaliação de desempenho de indivíduos, omitindo a avaliação de grupos exigida pelo resultado esperado GRH 8 — portanto, atende parcialmente. Já a Evidência 2 comprova que os treinamentos são conduzidos e registrados no portfólio de cada colaborador (atendendo totalmente ao GRH 6) e têm sua eficácia avaliada tanto pelos participantes quanto por avaliação individual final (atendendo totalmente ao GRH 7).",
+      "distratores": "As alternativas A e D erram ao afirmar atendimento total ao GRH 8, enquanto as alternativas C e E subestimam o cumprimento completo dos critérios GRH 6 e GRH 7 demonstrado na Evidência 2."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q27",
+    "subarea": "Qualidade de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 27
+    },
+    "enunciado": "O gráfico a seguir, elaborado pelo diretor de tecnologia da informação de uma empresa, apresenta um modelo para a qualidade de produto de software com base no seu custo e no seu valor para a organização.\n\nLegenda do gráfico:\n• A - Custo decorrente de falhas\n• B - Custo total\n• C - Custo do desenvolvimento\n• D - Valor do produto\n• E - Valor líquido\n\nA região representada no gráfico em que o produto de software deve ser lançado no mercado para permitir que a organização tenha o melhor valor de retorno do investimento é a",
+    "imagem_url": "assets/img/enade2014_si_q27.png",
+    "alternativas": {
+      "A": "1.",
+      "B": "2.",
+      "C": "3.",
+      "D": "4.",
+      "E": "5."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "Na região 3, a curva do Valor do produto (D) supera a curva do Custo total (B), fazendo com que a curva do Valor líquido (E = Valor do produto − Custo total) atinja seu ponto máximo positivo antes que os custos crescentes de desenvolvimento tardio ultrapassem o ganho marginal de qualidade.",
+      "distratores": "Nas regiões 1 e 2, o custo decorrente de falhas ainda é muito elevado, mantendo o valor líquido negativo. Nas regiões 4 e 5, o investimento excessivo em desenvolvimento prolongado eleva o custo total acima do valor percebido pelo mercado, reduzindo novamente o retorno."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q28",
+    "subarea": "Engenharia de Requisitos",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 28
+    },
+    "enunciado": "Conforme a norma ISO 9241, a usabilidade é definida como a capacidade que um sistema interativo de software oferece a seus usuários, em um contexto específico de operação, para a realização de tarefas de maneira eficaz, eficiente e agradável. Com fundamento nesse conceito, uma empresa deseja medir a satisfação dos consumidores de seus produtos e, para isso, desenvolverá um sistema de software. A equipe de desenvolvimento do sistema de software elencou os requisitos listados na tabela abaixo.\n\n• RQ1: Cada produto da empresa deverá ser avaliado, por um usuário, com um valor numérico inteiro entre -5 e 5.\n• RQ2: Cada transação do sistema com o banco de dados para registrar uma avaliação de um produto deve ser realizada em um tempo inferior a 20 segundos.\n• RQ3: Cada operação do usuário deverá ser realizada em até três telas.\n• RQ4: O sistema deve ter interface com sistemas legados.\n• RQ5: O usuário consumidor irá identificar-se pelo código do número de Cadastro de Pessoa Física (CPF).\n\nEntre os requisitos listados na tabela, o código do que se refere à usabilidade é",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "RQ1.",
+      "B": "RQ2.",
+      "C": "RQ3.",
+      "D": "RQ4.",
+      "E": "RQ5."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "O requisito RQ3 ('Cada operação do usuário deverá ser realizada em até três telas') estabelece um critério mensurável de facilidade de navegação, simplicidade de fluxo e eficiência na interação do usuário, enquadrando-se diretamente no atributo de qualidade de usabilidade.",
+      "distratores": "RQ1 e RQ5 são requisitos funcionais (regras de entrada e identificação); RQ2 é um requisito não funcional de desempenho/eficiência de tempo de resposta; e RQ4 é um requisito não funcional de interoperabilidade."
+    }
+  },
+  {
+    "id": "ENADE2014-SI-Q35",
+    "subarea": "Modelagem de Software",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2014,
+      "numero_questao": 35
+    },
+    "enunciado": "Way back in the late twentieth century, 1997 to be exact, the Object Management Group (OMG) released the Unified Modeling Language (UML). One of the purposes of UML was to provide the development community with a stable and common design language that could be used to develop and build computer applications. UML brought forth a unified standard modeling notation that IT professionals had been wanting for years. Using UML, IT professionals could now read and disseminate system structure and design plans, just as construction workers have been doing for years with blueprints of buildings.\n\nIt is now the twenty-first century, 2003 to be precise, and UML has gained traction in our profession. On 75 percent of the resumes I see, there is a bullet point claiming knowledge of UML. However, after speaking with a majority of these job candidates, it becomes clear that they do not truly know UML. Typically, they are either using it as a buzz word, or they have had a sliver of exposure to UML.\n\nCom base no texto e nos conceitos de UML, avalie as afirmações a seguir.\nI. Na maioria dos currículos analisados pelo autor, existe alguma indicação de conhecimento da linguagem UML pelo candidato ao emprego.\nII. A UML é composta por diversos diagramas, como diagrama de caso de uso, diagrama de especificação e diagrama de componentes.\nIII. A UML não é uma linguagem de programação, mas, sim, uma linguagem de modelagem padronizada para os profissionais de TI cuja notação independe de processos.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "II, apenas.",
+      "C": "I e III, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações I e III estão corretas. O texto afirma explicitamente que 75% dos currículos analisados mencionam UML (I), e a UML é uma notação padrão de modelagem visual independente de processo de desenvolvimento (pode ser usada com RUP, cascata, iterativo ou ágil), não sendo uma linguagem de programação (III).",
+      "distratores": "A afirmação II é incorreta porque 'diagrama de especificação' não faz parte da especificação oficial dos diagramas estruturais ou comportamentais da UML."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q13",
+    "subarea": "Qualidade de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 13
+    },
+    "enunciado": "A qualidade do processo de desenvolvimento de software incide de forma direta sobre a qualidade do produto a ser entregue. Ressalta-se que a elaboração do software demanda a execução de um projeto. Com isso, o processo de desenvolvimento de software envolve criatividade e, nesse contexto, as habilidades e a experiência de cada desenvolvedor influenciam significativamente os resultados. Além disso, fatores externos, tais como novas tecnologias ou pressões para a antecipação de prazo para liberação de um release também podem interferir na qualidade do produto, independente do processo de software utilizado.\n\nConsiderando o contexto da qualidade de processo e de produto de software, avalie as afirmações a seguir.\nI. O gerenciamento de qualidade de processo e seu contínuo aprimoramento contribuem para a produção de um software com poucos defeitos.\nII. A definição de padrões de processo, determinando os parâmetros para a realização das revisões de software, são fundamentais para gerenciar a qualidade do processo de software.\nIII. O monitoramento do processo de desenvolvimento de software é essencial para garantir que os padrões adotados estejam sendo devidamente seguidos.\nIV. O gerente de projetos deve definir processos que estabeleçam meios para atingir a qualidade de software, além de criar ou adotar métricas que permitam à organização avaliar se o software possui o nível de qualidade necessário.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e III.",
+      "B": "I e IV.",
+      "C": "II e IV.",
+      "D": "I, II e III.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "Conforme Ian Sommerville (Engenharia de Software), as afirmações I, II e III estão corretas: o gerenciamento e o aprimoramento contínuo do processo reduzem a incidência de defeitos no produto (I), padrões organizacionais definem os critérios para revisões técnicas (II) e o monitoramento assegura que os padrões estabelecidos estejam sendo efetivamente seguidos pelas equipes (III).",
+      "distratores": "A afirmação IV está incorreta porque a definição de processos padrão e métricas organizacionais de qualidade é responsabilidade da área/equipe independente de Garantia da Qualidade de Software (SQA) e da alta gestão organizacional, e não uma atribuição isolada de cada gerente de projetos."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q14",
+    "subarea": "Qualidade de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 14
+    },
+    "enunciado": "Projetado para ser compreensível, acessível, flexível e integrado a outras abordagens, como a ágil, o modelo Capability Maturity Model Integration CMMI-Dev (Desenvolvimento) ajuda as organizações a entender seu nível atual de capacidade e desempenho, oferecendo um guia para otimizar os resultados dos negócios.\n\nO modelo MPS para software (MPS-SW) tem como base os requisitos de processos definidos nos modelos de melhoria de processo e atende à necessidade de implantar os princípios de engenharia de software de forma adequada ao contexto das empresas, estando em conformidade com as principais abordagens internacionais para definição, avaliação e melhoria de processos de software.\n\nEm relação aos modelos CMMI-Dev e MPS-SW, avalie as afirmações a seguir.\nI. Os dois modelos são organizados em chamados níveis de maturidade, porém a quantidade de níveis no modelo MPS-SW é maior do que a apresentada no CMMI-Dev.\nII. Os dois modelos levam em consideração a Engenharia de Software para a implementação dos processos em todos os níveis, sem a necessidade de alinhamento com o planejamento estratégico da empresa.\nIII. Quanto maior o nível de maturidade de uma organização, mais avançada é sua orientação estratégica e sua capacidade de aplicação dos processos relacionados, o que possivelmente implica melhores resultados.\n\nÉ correto o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "II, apenas.",
+      "C": "I e III, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações I e III estão corretas. O modelo brasileiro MPS-SW estrutura-se em 7 níveis de maturidade (de G até A), quantidade superior aos 5 níveis da representação por estágios do CMMI-Dev (níveis 1 a 5) (I). Além disso, a progressão nos níveis de maturidade amplia o alinhamento estratégico e a previsibilidade dos processos organizacionais (III).",
+      "distratores": "A afirmação II é falsa porque tanto o CMMI-Dev quanto o MPS-SW exigem alinhamento direto entre a melhoria de processos de software e os objetivos estratégicos de negócio da organização."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q15",
+    "subarea": "Processos e Métodos Ágeis",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 15
+    },
+    "enunciado": "Os projetos são um esforço temporário empreendido para criar um produto, serviço ou resultado único (PMI. Guia PMBOK, 6. ed.).\n\nCom base na definição de projetos apresentada, avalie as afirmações a seguir.\nI. A criação de um produto único, ou um item do produto, pode representar um possível projeto.\nII. Um serviço único, ou uma capacidade de realizar um serviço, pode representar um possível projeto.\nIII. A operação de um software, mesmo que repetidas vezes, pode representar um possível projeto.\nIV. Uma combinação única de um ou mais produtos, serviços ou resultados, pode representar um possível projeto.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e III.",
+      "B": "II e III.",
+      "C": "II e IV.",
+      "D": "I, II e IV.",
+      "E": "I, III e IV."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "De acordo com o Guia PMBOK (6ª edição), projetos visam entregar um produto ou componente exclusivo (I), um serviço ou capacidade operacional inédita (II) ou uma combinação única de produtos, serviços e resultados (IV), sempre com início e término definidos.",
+      "distratores": "A afirmação III está incorreta porque a operação contínua e repetitiva de um sistema em produção caracteriza atividade operacional rotineira (sustentação contínua), e não um esforço temporário com entrega única."
+    }
+  },
+  {
+    "id": "ENADE2021-SI-Q18",
+    "subarea": "Qualidade de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 18
+    },
+    "enunciado": "A versão por estágios do Modelo Integrado de Maturidade em Capacitação (CMMI - Capability Maturity Model Integration) permite que o desenvolvimento de sistemas e processos de gerenciamento de uma organização seja avaliado e que a ele seja atribuído um nível de maturidade.\n\nConsiderando a informação apresentada, suponha que uma determinada organização tenha processos de gerenciamento bem caracterizados, descritos por padrões, além de utilizar ferramentas e métodos estabelecidos. De acordo com a versão por estágios do CMMI, esta organização possui os requisitos mínimos necessários para atingir qual nível de maturidade?",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Inicial.",
+      "B": "Definido.",
+      "C": "Gerenciado.",
+      "D": "Em otimização.",
+      "E": "Gerenciado quantitativamente."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "Na representação por estágios do CMMI, o Nível 3 (Definido) caracteriza-se exatamente pela institucionalização de processos padrão em toda a organização, documentados e apoiados por métodos e ferramentas estabelecidos.",
+      "distratores": "No Nível 1 (Inicial), os processos são ad hoc e imprevisíveis; no Nível 2 (Gerenciado), o controle ocorre apenas no âmbito individual de cada projeto, sem padronização organizacional; no Nível 4 (Gerenciado quantitativamente), há controle estatístico de desempenho; e no Nível 5 (Em otimização), o foco está na melhoria contínua baseada em inovação."
+    }
+  },
+  {
+    "id": "ENADE2021-ADS-Q09",
+    "subarea": "Engenharia de Requisitos",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 9
+    },
+    "enunciado": "A etapa de definição de requisitos é voltada para estabelecer quais funções são requeridas pelo sistema e as restrições sobre a operação e o desenvolvimento do software. Os requisitos de software podem ser classificados como requisitos funcionais e não funcionais.\n\nConsiderando as informações do texto, assinale a alternativa em que o item é um requisito funcional.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "O software deve ser operacionalizado no sistema Linux.",
+      "B": "O tempo de desenvolvimento não deve ultrapassar seis meses.",
+      "C": "O software deve emitir relatórios de compras a cada quinze dias.",
+      "D": "O tempo de resposta do sistema não deve ultrapassar 30 segundos.",
+      "E": "A base de dados deve ser protegida para acesso apenas de usuários autorizados."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "A emissão periódica de relatórios de compras descreve uma funcionalidade concreta que o sistema deve processar e entregar ao usuário, caracterizando um requisito funcional.",
+      "distratores": "As demais opções expressam restrições e atributos de qualidade (requisitos não funcionais): portabilidade/ambiente operacional (A), restrição organizacional de cronograma (B), desempenho/eficiência de tempo de resposta (D) e segurança da informação (E)."
+    }
+  },
+  {
+    "id": "ENADE2021-ADS-Q22",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 22
+    },
+    "enunciado": "Um ponto importante para fábricas de software é a garantia de que seus produtos e/ou serviços acompanhem as diversas mudanças ocasionadas pelo mundo corporativo. As restrições de orçamento ou cronograma, reestruturação do negócio, modificações de regras de negócio ou novas necessidades do cliente geram mudanças inevitáveis. Nesse cenário, a utilização de um processo de Gerência de Configuração de Software (GCS) que contemple características necessárias para gerenciar e controlar a evolução de um software, através do controle formal de versão e solicitação de mudanças, é extremamente importante.\n\nSobre o processo de Gerência de Configuração de Software (GCS), avalie as afirmações a seguir.\nI. O controle de versão possibilita o compartilhamento de dados e a edição colaborativa, permitindo a gestão de diferentes ramos de desenvolvimento e possibilitando a existência de diferentes versões de forma simultânea.\nII. A auditoria de configuração é uma atividade de garantia de qualidade do sistema que tem por objetivo assegurar que a qualidade do software seja mantida quando feitas alterações requisitadas.\nIII. O relatório de status de configuração possui informações sobre o GCS, tendo por objetivo manter o cliente informado sobre as alterações, e deve ser gerado ao final do processo.\nIV. A GCS proporciona um conjunto de atividades de acompanhamento e controle de mudanças que é iniciado logo depois que o software for fornecido ao cliente e colocado em operação.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "II e III.",
+      "C": "III e IV.",
+      "D": "I, II e IV.",
+      "E": "I, III e IV."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "As afirmações I e II estão corretas. Sistemas de controle de versão permitem desenvolvimento paralelo por meio de branches (ramos) e controle de múltiplas versões simultâneas (I), enquanto a auditoria de configuração verifica a integridade e a conformidade dos artefatos modificados (II).",
+      "distratores": "A afirmação III é falsa porque o relatório de status de configuração é produzido continuamente durante todo o ciclo de vida do software (e não apenas ao final). A afirmação IV é falsa porque a GCS atua desde o início da construção dos artefatos do projeto, antes mesmo da entrega em produção."
+    }
+  },
+  {
+    "id": "ENADE2021-ADS-Q23",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2021,
+      "numero_questao": 23
+    },
+    "enunciado": "A evolução de sistemas de software legados pode ser dividida em três categorias: manutenção, modernização e substituição. No primeiro período de evolução a manutenção é realizada, pois as necessidades de negócio são alteradas e o sistema precisa suprir as mudanças por meio da manutenção. No segundo período é realizada a modernização do sistema, pois as necessidades de negócio continuam a crescer, mas há mudanças mais significativas que se fazem necessárias. Além da substituição do sistema de software, nos casos em que o modelo de negócio não atende mais à necessidade da empresa, a manutenção e a modernização também não são mais suficientes.\n\nConsiderando um sistema de software implantado de ERP (Enterprise Resource Planning - Planejamento de Recursos Empresariais) contendo um conjunto de módulos que integra todos os departamentos existentes de uma empresa, observou-se a necessidade de criação de um relatório gerencial de comissão da equipe de vendas. Nesse contexto, é correto afirmar que a manutenção a ser realizada é",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "corretiva.",
+      "B": "evolutiva.",
+      "C": "funcional.",
+      "D": "preventiva.",
+      "E": "adaptativa."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "A implementação de um novo relatório gerencial para atender a uma nova demanda de negócio do cliente configura manutenção evolutiva (adição ou expansão de funcionalidades no software em operação).",
+      "distratores": "A manutenção corretiva (A) corrige falhas e defeitos existentes; a preventiva (D) refatora ou reestrutura o código para evitar problemas futuros; a adaptativa (E) ajusta o sistema a mudanças de ambiente técnico ou legislação externa; e 'funcional' (C) não constitui uma classificação padrão de manutenção de software."
+    }
+  }
+  ,{
+    "id": "ENADE2011-SI-Q25",
+    "subarea": "Modelagem de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2011,
+      "numero_questao": 25
+    },
+    "enunciado": "Um Padrão de Projeto nomeia, abstrai e identifica os aspectos-chave de uma estrutura de projeto comum para torná-la útil para a criação de um projeto orientado a objetos reutilizáveis. (GAMMA, E.; HELM, R.; JOHNSON, R.; VLISSIDES, J. Padrões de Projeto: Soluções Reutilizáveis de Software Orientado a Objetos. Porto Alegre: Bookman, 2000.)\n\nEm relação a Padrões de Projeto, analise as afirmações a seguir.\n\nI. Prototype é um tipo de padrão estrutural.\nII. Singleton tem por objetivos garantir que uma classe tenha ao menos uma instância e fornecer um ponto global de acesso para ela.\nIII. Template Method tem por objetivo definir o esqueleto de um algoritmo em uma operação, postergando a definição de alguns passos para subclasses.\nIV. Iterator fornece uma maneira de acessar sequencialmente os elementos de um objeto agregado sem expor sua representação subjacente.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "I e IV.",
+      "D": "II e III.",
+      "E": "III e IV."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "As afirmações III e IV estão corretas. Conforme o catálogo GoF, o padrão comportamental Template Method define a estrutura base de um algoritmo delegando etapas específicas às subclasses (III), enquanto o Iterator permite percorrer elementos de uma coleção sequencialmente sem expor sua estrutura interna (IV).",
+      "distratores": "A afirmação I é falsa porque Prototype é um padrão criacional (baseado na clonagem de protótipos), e não estrutural. A afirmação II é falsa porque o Singleton garante que uma classe tenha apenas uma única instância (e não 'ao menos uma')."
+    }
+  },
+  {
+    "id": "ENADE2011-COMP-Q09",
+    "subarea": "Engenharia de Requisitos",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2011,
+      "numero_questao": 9
+    },
+    "enunciado": "O levantamento de requisitos é uma etapa fundamental do projeto de sistemas. Dependendo da situação encontrada, uma ou mais técnicas podem ser utilizadas para a elicitação dos requisitos. A respeito dessas técnicas, analise as afirmações a seguir.\n\nI. Workshop de requisitos consiste na realização de reuniões estruturadas e delimitadas entre os analistas de requisitos do projeto e representantes do cliente.\nII. Cenário consiste na observação das ações do funcionário na realização de uma determinada tarefa, para verificar os passos necessários para sua conclusão.\nIII. As entrevistas são realizadas com os stakeholders e podem ser abertas ou fechadas.\nIV. A prototipagem é uma versão inicial do sistema, baseado em requisitos levantados em outros sistemas da organização.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "II e IV.",
+      "D": "I, III e IV.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "As afirmações I e III estão corretas. Workshops de requisitos (como sessões JAD) reúnem analistas e representantes dos clientes em encontros estruturados para elicitação e consenso (I), e entrevistas com stakeholders podem seguir roteiros estruturados (fechadas) ou exploratórios (abertas) (III).",
+      "distratores": "A afirmação II confunde o conceito de cenário (descrição narrativa de situações de uso do sistema) com a técnica de observação/etnografia no ambiente de trabalho. A afirmação IV é falsa porque um protótipo é construído para explorar e validar os requisitos do próprio sistema em desenvolvimento."
+    }
+  },
+  {
+    "id": "ENADE2011-COMP-Q12",
+    "subarea": "Modelagem de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2011,
+      "numero_questao": 12
+    },
+    "enunciado": "Analise as seguintes afirmações sobre a UML (Linguagem de Modelagem Unificada).\n\nI. A UML é uma metodologia para o desenvolvimento de software orientado a objetos, uma vez que fornece um conjunto de representações gráficas e sua semântica para a modelagem de software.\nII. O diagrama de casos de uso procura, por meio de uma linguagem simples, demonstrar o comportamento externo do sistema. Esse diagrama apresenta o sistema sob a perspectiva do usuário, e é dentre todos da UML, o mais abstrato, flexível e informal.\nIII. Um relacionamento de extensão de um caso de uso “A” para um caso de uso “B” significa que toda vez que “A” for executado ele incorporará o comportamento definido em “B”.\nIV. Os diagramas de comportamento da UML demonstram como ocorrem as trocas de mensagens entre os objetos do sistema para se atingir um determinado objetivo.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I e II.",
+      "B": "II e IV.",
+      "C": "III e IV.",
+      "D": "I, II e III.",
+      "E": "II, III e IV."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "As afirmações II e IV estão corretas. O diagrama de casos de uso captura os requisitos funcionais externos sob a ótica dos atores de maneira acessível e de alto nível (II), e os diagramas comportamentais (como sequência e comunicação) representam a interação dinâmica e a troca de mensagens entre objetos (IV).",
+      "distratores": "A afirmação I é incorreta porque a UML é uma linguagem de modelagem visual independente de processo, e não uma metodologia de desenvolvimento. A afirmação III é incorreta porque a incorporação obrigatória corresponde ao relacionamento de inclusão (<<include>>), enquanto a extensão (<<extend>>) é opcional/condicional."
+    }
+  },
+  {
+    "id": "ENADE2011-COMP-Q18",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2011,
+      "numero_questao": 18
+    },
+    "enunciado": "A Norma ISO/IEC FDIS 14764 (2006) estabelece definições de vários tipos de manutenção e fornece um guia para gerenciar o processo de manutenção, que pode ser aplicado no planejamento, execução e controle, revisão e avaliação, e fechamento do processo de manutenção. Segundo essa Norma, solicitações de modificação são classificadas como corretiva, preventiva, adaptativa ou perfectiva. Os detalhes de como implementar ou realizar as atividades e tarefas de manutenção não são especificadas pela Norma, sendo de responsabilidade do mantenedor.\n\nConsiderando os tipos de manutenção e as atividades de implementação do processo, avalie as afirmações a seguir.\n\nI. O mantenedor deve desenvolver, documentar e executar planos e procedimentos para realizar as atividades e tarefas do processo de manutenção.\nII. O mantenedor deve alterar a configuração do sistema para corrigir erros identificados pelos usuários usando a manutenção perfectiva.\nIII. O mantenedor deve estabelecer procedimentos para receber, registrar e rastrear solicitações de modificação/registro de problemas dos usuários, e também prover realimentação para os usuários.\nIV. O mantenedor deve documentar a estratégia a ser usada para melhorar a manutebilidade futura do sistema, usando a manutenção corretiva.\n\nÉ correto apenas o que se afirma em",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "I e III.",
+      "D": "II e IV.",
+      "E": "III e IV."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "As afirmações I e III estão corretas. De acordo com a norma ISO/IEC 14764, a organização mantenedora deve planejar e documentar formalmente os procedimentos de manutenção (I), bem como manter um fluxo estruturado de registro, rastreamento e retorno (feedback) às solicitações dos usuários (III).",
+      "distratores": "A afirmação II é falsa porque a correção de defeitos reportados em produção corresponde à manutenção corretiva (e não perfectiva). A afirmação IV é falsa porque alterações voltadas a melhorar a manutenibilidade futura e prevenir falhas latentes correspondem à manutenção preventiva (e não corretiva)."
+    }
+  },
+  {
+    "id": "ENADE2011-COMP-Q27",
+    "subarea": "Processos e Métodos Ágeis",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "ENADE",
+      "instituicao": "INEP",
+      "ano": 2011,
+      "numero_questao": 27
+    },
+    "enunciado": "Modelos de ciclo de vida de processo de software são descrições abstratas do processo de desenvolvimento, mostrando as principais atividades e informações usadas na produção e manutenção de software, bem como a ordem em que as atividades devem ser executadas.\n\nCom relação aos modelos de ciclo de vida de processo de software, analise as seguintes asserções.\n\nO modelo de desenvolvimento em cascata acrescenta aspectos gerenciais (planejamento, controle e tomada de decisão) ao processo de desenvolvimento de software\n\nPORQUE\n\nconsidera que o processo é composto por várias etapas que são executadas de forma sistemática e sequencial.\n\nAcerca dessas asserções, assinale a opção correta.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "As duas asserções são proposições verdadeiras, e a segunda é uma justificativa correta da primeira.",
+      "B": "As duas asserções são proposições verdadeiras, mas a segunda não é uma justificativa correta da primeira.",
+      "C": "A primeira asserção é uma proposição verdadeira, e a segunda, uma proposição falsa.",
+      "D": "A primeira asserção é uma proposição falsa, e a segunda, uma proposição verdadeira.",
+      "E": "Tanto a primeira quanto a segunda asserções são proposições falsas."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "A primeira asserção é falsa e a segunda é verdadeira. O modelo em cascata organiza as atividades técnicas de engenharia de forma linear e sequencial (segunda asserção verdadeira), mas não incorpora explicitamente ciclos gerenciais de avaliação de riscos e tomada de decisão iterativa — característica introduzida pelo modelo Espiral de Boehm (primeira asserção falsa).",
+      "distratores": "As alternativas A, B e C erram ao considerar verdadeira a primeira asserção, enquanto a alternativa E erra ao invalidar a definição clássica sequencial do modelo em cascata na segunda asserção."
+    }
+  }
+  ,{
+    "id": "POSCOMP2019-Q53",
+    "subarea": "Testes e Qualidade",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2019,
+      "numero_questao": 53
+    },
+    "enunciado": "Analise as assertivas abaixo sobre testes de regressão e assinale V, se verdadeiras, ou F, se falsas.\n\n( ) Uma suíte de testes de regressão bem planejada deve conter dois tipos de casos de teste: aqueles focados nos componentes diretamente relacionados à mudança e aqueles que exercitem funcionalidades já existentes que possam ter sido afetadas pela mudança.\n( ) A execução manual de testes de regressão é inviável.\n( ) Testes de regressão podem estar relacionados tanto a testes funcionais quanto a testes não funcionais.\n\nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "F - V - F.",
+      "B": "V - V - V.",
+      "C": "V - F - V.",
+      "D": "F - F - F.",
+      "E": "F - F - V."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "A sequência correta é F - F - V. A terceira assertiva é verdadeira porque testes de regressão verificam se modificações no sistema introduziram falhas tanto em requisitos funcionais quanto em atributos não funcionais (como desempenho, segurança e usabilidade).",
+      "distratores": "A primeira assertiva é falsa porque, segundo a literatura clássica (Sommerville), uma suíte de regressão envolve três classes de casos de teste: todos os casos de teste existentes, os que exercitam componentes alterados e os que testam componentes potencialmente afetados (e não apenas dois tipos). A segunda assertiva é falsa porque, embora a automação seja recomendada, a execução manual de testes de regressão não é inviável."
+    }
+  },
+  {
+    "id": "POSCOMP2019-Q56",
+    "subarea": "Arquitetura de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2019,
+      "numero_questao": 56
+    },
+    "enunciado": "Analise as seguintes assertivas sobre padrões arquiteturais de software e assinale V, se verdadeiras, ou F, se falsas.\n\n( ) Mesmo que um dado padrão arquitetural ofereça uma solução para o problema sendo resolvido, nem sempre ele é adequado. Fatores como contexto e o sistema de forças que afeta a solução fazem também parte do processo de avaliação e da escolha de padrões adequados.\n( ) Padrão MVC é uma adaptação do padrão arquitetural Camadas. A Camada Visão lida com a apresentação e a manipulação da interface, a Camada Modelo organiza os objetos específicos da aplicação, e a Camada Controle posiciona-se entre estas duas com as regras do negócio.\n( ) O padrão Broker é voltado a problemas de ambientes distribuídos. Sugere uma arquitetura na qual um componente (broker) estabelece uma mediação que permite um desacoplamento entre clientes e servidores.\n\nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "V - V - V.",
+      "B": "F - F - V.",
+      "C": "V - V - F.",
+      "D": "V - F - V.",
+      "E": "F - V - F."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "A sequência correta é V - F - V. A primeira assertiva é verdadeira porque a adoção de um padrão arquitetural (Buschmann et al., POSA) depende diretamente do contexto e do sistema de forças (restrições e atributos de qualidade) do problema. A terceira assertiva é verdadeira porque o padrão Broker desacopla clientes e servidores em sistemas distribuídos por meio de um componente mediador.",
+      "distratores": "A segunda assertiva é falsa porque o padrão MVC não é uma derivação da arquitetura em Camadas nem posiciona o Controlador como camada intermediária responsável pelas regras de negócio; no MVC, o Modelo encapsula os dados e a lógica central da aplicação, enquanto Visão e Controlador interagem diretamente com o Modelo."
+    }
+  },
+  {
+    "id": "POSCOMP2019-Q70",
+    "subarea": "Gerência de Projetos",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2019,
+      "numero_questao": 70
+    },
+    "enunciado": "Considerando a gerência de projetos de software, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas.\n\n( ) A gerência efetiva de projetos de software deve abranger três aspectos, a saber, produto, processo e projeto.\n( ) A análise de risco de um projeto visa a analisar a viabilidade de produzir software dentro do custo e esforço estimados.\n( ) O desenvolvimento de cronogramas de projetos pode ser desenvolvido com o auxílio de modelos como PERT (Program evaluation and review technique) ou CPM (Critical Path Method).\n\nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "V - V - V.",
+      "B": "V - F - V.",
+      "C": "F - F - F.",
+      "D": "F - F - V.",
+      "E": "V - V - F."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "A sequência correta é F - F - V. A terceira assertiva é verdadeira porque PERT (Program Evaluation and Review Technique) e CPM (Critical Path Method) são métodos clássicos de redes de atividades utilizados para elaborar e controlar cronogramas de projetos.",
+      "distratores": "A primeira assertiva é falsa porque, segundo Pressman, a gerência efetiva de projetos de software abrange quatro aspectos (os '4 Ps'): Pessoas, Produto, Processo e Projeto (e não apenas três). A segunda assertiva é falsa porque analisar a exequibilidade dentro de custo e esforço estimados refere-se à análise de viabilidade e estimativa, enquanto a análise de riscos foca na identificação e quantificação de incertezas e impactos potenciais."
+    }
+  },
+  {
+    "id": "POSCOMP2024-Q58",
+    "subarea": "Testes e Qualidade",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2024,
+      "numero_questao": 58
+    },
+    "enunciado": "De acordo com o livro \"Engenharia de Software - Uma Abordagem Profissional\", de Roger S. Pressman e Bruce R. Maxim, a qualidade de software pode ser definida como \"uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável para aqueles que o produzem e para aqueles que o utilizam\". O resultado final de termos um software de alta qualidade, segundo os autores, são os seguintes, EXCETO:",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Aumentar a complexidade dos processos de negócios.",
+      "B": "Gerar maior receita pelo produto de software.",
+      "C": "Obter maior rentabilidade, quando uma aplicação suporta um processo de negócio.",
+      "D": "Obter maior disponibilidade de informações cruciais para o negócio.",
+      "E": "Obter menor exigência de manutenção, menos correções de erros e menos suporte ao cliente."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "A alternativa A é a exceção correta. Segundo Pressman e Maxim, a engenharia de software de alta qualidade busca simplificar e otimizar os processos de negócios apoiados pela aplicação, e não aumentar sua complexidade.",
+      "distratores": "As alternativas B, C, D e E apresentam benefícios reais apontados por Pressman e Maxim como resultados diretos da entrega de um software de alta qualidade: maior receita comercial (B), maior rentabilidade operacional (C), maior disponibilidade de informações estratégicas (D) e redução de custos com manutenção corretiva e suporte (E)."
+    }
+  },
+  {
+    "id": "POSCOMP2024-Q59",
+    "subarea": "Processos e Métodos Ágeis",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2024,
+      "numero_questao": 59
+    },
+    "enunciado": "De acordo com o livro \"Engenharia de Software\", de Ian Sommerville, \"um processo de software é um conjunto de atividades relacionadas que levam à produção de um sistema de software\". De acordo com o autor, a definição abaixo refere-se a qual das quatro atividades fundamentais de engenharia de software?\n\n\"É o processo de entender e definir quais serviços são exigidos do sistema e identificar as restrições na operação e no desenvolvimento do sistema\".",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Desenvolvimento de software.",
+      "B": "Validação de software.",
+      "C": "Evolução de software.",
+      "D": "Especificação de software.",
+      "E": "Projeto de software."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "A alternativa D está correta. Para Ian Sommerville, as quatro atividades fundamentais comuns a todos os processos de software são especificação, desenvolvimento, validação e evolução; a especificação de software (engenharia de requisitos) corresponde exatamente à definição dos serviços exigidos e das restrições operacionais e de desenvolvimento.",
+      "distratores": "Desenvolvimento de software (A) abrange o projeto e a programação do sistema; validação de software (B) verifica se o sistema atende às necessidades do cliente e às especificações; evolução de software (C) trata da modificação contínua do sistema após a entrega; e projeto de software (E) é uma subatividade do desenvolvimento, não uma das quatro atividades fundamentais citadas pelo autor."
+    }
+  },
+  {
+    "id": "POSCOMP2024-Q60",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2024,
+      "numero_questao": 60
+    },
+    "enunciado": "Sobre gerenciamento de configuração de software, de acordo com o livro \"Engenharia de Software - Uma Abordagem Profissional\", de Roger S. Pressman e Bruce R. Maxim, analise as assertivas abaixo e assinale a alternativa correta.\n\nI. Os elementos que constituem todas as informações geradas durante o processo de software são conhecidos coletivamente como configuração de software.\nII. À medida que o trabalho de engenharia de software progride, forma-se uma hierarquia de itens de configuração de software.\nIII. O gerenciamento de configuração de software consiste em um conjunto de atividades realizadas para administrar as mudanças ao longo de todo o ciclo de vida de um software.",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Todas as assertivas estão corretas.",
+      "B": "Todas as assertivas estão incorretas.",
+      "C": "Apenas as assertivas I e II estão corretas.",
+      "D": "Apenas as assertivas I e III estão corretas.",
+      "E": "Apenas as assertivas II e III estão corretas."
+    },
+    "gabarito": "A",
+    "justificativa": {
+      "correta": "A alternativa A está correta. Conforme Pressman e Maxim, a configuração de software reúne o conjunto de informações geradas ao longo do processo (I), organizadas progressivamente em uma hierarquia de Itens de Configuração de Software — ICS (II), enquanto o Gerenciamento de Configuração de Software (GCS) compreende o conjunto de atividades destinadas a controlar e administrar mudanças durante todo o ciclo de vida (III).",
+      "distratores": "As alternativas B, C, D e E são incorretas porque todas as três definições reproduzem fielmente os conceitos fundamentais de Gerenciamento de Configuração de Software apresentados por Pressman e Maxim."
+    }
+  },
+  {
+    "id": "POSCOMP2023-Q34",
+    "subarea": "Modelagem e UML",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2023,
+      "numero_questao": 34
+    },
+    "enunciado": "Considerando o diagrama de classes UML representado na Figura 4, assinale a alternativa correta.",
+    "imagem_url": "assets/img/poscomp2023-q34.png",
+    "alternativas": {
+      "A": "A classe \"Pessoa\" se associa com a classe \"Funcionario\", que por sua vez tem uma relação de generalização com a classe \"Tarefa\".",
+      "B": "A classe \"Pessoa\" herda da classe \"Funcionario\", que tem uma relação de associação com a classe \"Tarefa\".",
+      "C": "A associação com navegabilidade da classe \"Funcionario\" para a classe \"Tarefa\" gera no código um atributo \"lista de objetos\" da classe \"Tarefa\" na classe \"Funcionario\".",
+      "D": "A classe \"Tarefa\" faz parte da classe \"Funcionario\", constituindo uma relação de agregação.",
+      "E": "O método \"addTarefa (tarefa: Tarefa)\" pode ser invocado a partir de uma instância da classe \"Pessoa\", através de polimorfismo."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "A alternativa C está correta. A seta contínua com ponta aberta saindo de \"Funcionario\" para \"Tarefa\", acompanhada do papel \"-tarefas\" e da multiplicidade \"1..*\", indica uma associação navegável unidirecional que se traduz na implementação de uma coleção (lista de objetos) de \"Tarefa\" como atributo privado na classe \"Funcionario\".",
+      "distratores": "As alternativas A e B invertem as relações: a seta com triângulo vazio aponta de \"Funcionario\" para \"Pessoa\", indicando que \"Funcionario\" herda de \"Pessoa\" (generalização), enquanto \"Funcionario\" e \"Tarefa\" possuem uma associação simples. A alternativa D é incorreta porque não há losango de agregação na associação. A alternativa E é incorreta porque \"addTarefa\" pertence exclusivamente à subclasse \"Funcionario\", não sendo acessível diretamente por uma referência tipada como \"Pessoa\"."
+    }
+  },
+  {
+    "id": "POSCOMP2024-Q35",
+    "subarea": "Modelagem e UML",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2024,
+      "numero_questao": 35
+    },
+    "enunciado": "Analise o seguinte diagrama de classes da UML (Linguagem de Modelagem Unificada) e assinale a alternativa que contém o(s) elemento(s) polimórfico(s).",
+    "imagem_url": "assets/img/poscomp2024-q35.png",
+    "alternativas": {
+      "A": "A relação entre as classes Ponto e Quadro.",
+      "B": "Os atributos -x e -y da classe Ponto.",
+      "C": "Os métodos +getX() e +getY() da classe Ponto.",
+      "D": "Os métodos +print() das classes Ponto e Círculo.",
+      "E": "O método +setRaio() da classe Círculo."
+    },
+    "gabarito": "D",
+    "justificativa": {
+      "correta": "A alternativa D está correta. Como \"Círculo\" é uma subclasse de \"Ponto\" (relação de generalização/herança) e redefine a operação \"+print()\" declarada na superclasse, caracteriza-se o polimorfismo de inclusão por sobrescrita de método.",
+      "distratores": "A relação entre \"Ponto\" e \"Quadro\" (A) representa uma agregação; \"-x\" e \"-y\" (B) são atributos encapsulados; \"+getX()\" e \"+getY()\" (C) são métodos acessores herdados sem sobrescrita; e \"+setRaio()\" (E) é um método específico definido apenas na subclasse \"Círculo\"."
+    }
+  },{
+    "id": "POSCOMP2025-Q58",
+    "subarea": "Arquitetura de Software",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2025,
+      "numero_questao": 58
+    },
+    "enunciado": "Uma empresa de desenvolvimento de software está desenvolvendo um módulo de IA para seu principal produto. Nesse software, existe um algoritmo que calcula de forma determinística um valor aproximado e retorna para o módulo que apresenta o resultado na interface gráfica. O desenvolvedor deve modificar o código de forma que seja possível trocar essa rotina que realiza o cálculo por um modelo treinado de IA, sendo possível trocar entre eles em tempo de execução e também sendo possível adicionar novas formas de cálculo. Esse módulo de cálculo a ser desenvolvido deve estar encapsulado para os módulos que se comunicam com ele. Qual padrão de projeto o desenvolvedor deve usar nesse caso?",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Decorator.",
+      "B": "Factory Method.",
+      "C": "Proxy.",
+      "D": "Builder.",
+      "E": "Strategy."
+    },
+    "gabarito": "E",
+    "justificativa": {
+      "correta": "A alternativa E está correta. O padrão comportamental Strategy (GoF) define uma família de algoritmos, encapsula cada um deles em classes separadas com uma interface comum e os torna intercambiáveis em tempo de execução, permitindo adicionar novas estratégias de cálculo sem alterar os módulos clientes.",
+      "distratores": "Decorator (A) adiciona responsabilidades dinamicamente a um objeto por composição em camadas; Factory Method (B) delega a instanciação de objetos para subclasses; Proxy (C) fornece um substituto ou representante para controlar o acesso a outro objeto; e Builder (D) separa a construção passo a passo de um objeto complexo da sua representação."
+    }
+  },
+  {
+    "id": "POSCOMP2025-Q59",
+    "subarea": "Processos e Métodos Ágeis",
+    "nivel_dificuldade": "Básico",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2025,
+      "numero_questao": 59
+    },
+    "enunciado": "Uma grande empresa de logística planeja substituir seu sistema de gerenciamento de frotas. Devido à alta complexidade e ao risco de uma substituição completa e simultânea, a diretoria optou por uma estratégia que se baseia na entrega de versões operacionais do software em partes. O plano consiste em desenvolver e entregar o sistema em uma série de funcionalidades predefinidas: a primeira entrega refere-se a um produto com as funcionalidades essenciais de rastreamento; a segunda adicionará o módulo de gerenciamento de manutenção; e a terceira implementará a otimização de rotas. Cada entrega refere-se a um software completo e utilizável que se integra aos anteriores. Qual modelo de ciclo de vida de desenvolvimento de software essa abordagem descreve?",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Modelo Espiral.",
+      "B": "Modelo Incremental.",
+      "C": "Modelo Cascata.",
+      "D": "Prototipação.",
+      "E": "Modelo em V."
+    },
+    "gabarito": "B",
+    "justificativa": {
+      "correta": "A alternativa B está correta. No Modelo Incremental, o sistema é especificado, desenvolvido e entregue como uma série de incrementos operacionais, onde cada nova versão adiciona um conjunto planejado de funcionalidades úteis que se integram às entregas anteriores.",
+      "distratores": "O Modelo Espiral (A) organiza o desenvolvimento em ciclos iterativos orientados explicitamente à análise e mitigação de riscos; o Modelo Cascata (C) realiza uma entrega única somente ao final de todas as fases sequenciais; a Prototipação (D) foca na construção rápida de versões experimentais para validar requisitos; e o Modelo em V (E) associa cada etapa de especificação e projeto a um nível correspondente de teste antes da entrega final."
+    }
+  },
+  {
+    "id": "POSCOMP2025-Q60",
+    "subarea": "Manutenção e Configuração",
+    "nivel_dificuldade": "Intermediário",
+    "fonte": {
+      "exame": "POSCOMP",
+      "instituicao": "SBC / Fundatec",
+      "ano": 2025,
+      "numero_questao": 60
+    },
+    "enunciado": "Para modernizar seu sistema de core banking desenvolvido há décadas, uma grande instituição financeira adotou um processo metodológico formal. A primeira etapa consistiu em uma análise de inventário, na qual todos os sistemas legados foram catalogados e priorizados por sua importância estratégica e custo de manutenção. Uma vez selecionado o sistema principal, a equipe realizou a reestruturação dos seus documentos técnicos, organizando e digitalizando manuais antigos. Em seguida, iniciou-se a fase de engenharia reversa, na qual os analistas estudaram o código-fonte para extrair e entender as regras de negócio, a arquitetura e o modelo de dados implícitos. Com esse entendimento, procederam com a reestruturação do código para melhorar sua modularidade e a reestruturação dos dados para otimizar o esquema do banco de dados. Finalmente, na fase de engenharia direta, a equipe utilizou as especificações e componentes aprimorados para reconstruir e implantar uma nova versão do sistema sobre uma plataforma tecnológica moderna, preservando a funcionalidade original. O conjunto completo dessas atividades, executadas de forma sequencial e integrada, descreve um processo formal conhecido na Engenharia de Software como:",
+    "imagem_url": null,
+    "alternativas": {
+      "A": "Refatoração de software.",
+      "B": "Manutenção adaptativa de software.",
+      "C": "Reengenharia de software.",
+      "D": "Melhoria do processo de software.",
+      "E": "Garantia da qualidade de software."
+    },
+    "gabarito": "C",
+    "justificativa": {
+      "correta": "A alternativa C está correta. Segundo Roger Pressman, o modelo de processo de Reengenharia de Software compreende exatamente as seis atividades cíclicas descritas: análise de inventário, reestruturação de documentos, engenharia reversa, reestruturação de código, reestruturação de dados e engenharia direta.",
+      "distratores": "Refatoração (A) altera apenas a estrutura interna do código sem envolver reconstrução completa de plataforma ou reestruturação formal de dados e documentação; manutenção adaptativa (B) ajusta o software a mudanças no ambiente operacional sem reestruturar todo o sistema legado; melhoria do processo (D) atua sobre a maturidade dos processos organizacionais; e garantia da qualidade (E) envolve auditoria e conformidade de padrões."
+    }
+  }
+]

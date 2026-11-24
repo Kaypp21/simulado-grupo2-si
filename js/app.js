@@ -10,13 +10,13 @@ const el = (id) => document.getElementById(id);
 
 async function init() {
   try {
-    const response = await fetch("data/questoes_grupo4.json");
+    const response = await fetch("data/questoes_grupo2.json");
     if (!response.ok) throw new Error("Falha ao carregar o arquivo JSON.");
     allQuestions = await response.json();
     updateAvailableCount();
   } catch (error) {
     el("filter-status").textContent =
-      "Erro ao carregar data/questoes_grupo4.json. Execute via servidor local (ex.: Live Server).";
+      "Erro ao carregar data/questoes_grupo2.json. Execute via servidor local (ex.: Live Server).";
     console.error(error);
   }
 
